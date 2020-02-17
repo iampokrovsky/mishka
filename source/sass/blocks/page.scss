@@ -1,0 +1,29 @@
+.page {
+  box-sizing: border-box;
+}
+
+.page__body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.page__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  opacity: 0.9;
+  display: none;
+  // display: block;
+}
+
+@media (min-width: $desktop-width) {
+  .page__header {
+    padding: 0;
+  }
+}

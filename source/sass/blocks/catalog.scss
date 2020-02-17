@@ -1,0 +1,28 @@
+.catalog {
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.catalog__list {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    padding: 50px;
+    padding-top: 82px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog {
+    padding: 131px 0 0 50px;
+  }
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

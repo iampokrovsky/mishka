@@ -1,0 +1,31 @@
+.button {
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 17px;
+  line-height: 20px;
+  font-family: "opensansbold", Arial, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px;
+  &--border {
+    color: #444444;
+    border: 2px solid #444444;
+  }
+  &--border:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+  &--border:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #444444;
+  }
+  &--fill {
+    color: #ffffff;
+    background-color: #63d1bb;
+  }
+}

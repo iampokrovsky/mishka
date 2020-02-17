@@ -1,0 +1,30 @@
+.form-сontent__heading {
+  @include osbold(27px, 30px, #000000);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 70px 30px;
+  min-height: 176px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .form-сontent__heading {
+    @include osbold(43px, 50px, #000000);
+    padding: 50px;
+    padding-top: 93px;
+    min-height: 222px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-сontent {
+    padding: 0;
+  }
+
+  .form-сontent__heading {
+    @include osbold(53px, 57px, #000000);
+    padding-top: 93px;
+    min-height: 251px;
+  }
+}

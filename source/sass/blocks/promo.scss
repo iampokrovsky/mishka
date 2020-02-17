@@ -1,0 +1,25 @@
+.promo {
+  box-sizing: border-box;
+}
+
+.promo__list {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 15px;
+  background-image: url("../../img/bg-zigzag-line.svg");
+  background-position: bottom 0 left 0;
+  background-repeat: no-repeat;
+  background-size: 330px;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__list {
+    padding-bottom: 24px;
+    background-size: 330px;
+    background-image: url("../../img/bg-zigzag-line.svg");
+    background-position: bottom 0 left 0;
+    background-size: 820px;
+  }
+}
