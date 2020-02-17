@@ -39,9 +39,16 @@
 .options__icon {
   box-sizing: border-box;
   position: absolute;
-  top: center;
   left: 30px;
   fill: rgba(0, 0, 0, 0.2);
+  height: 18px;
+  &--search {
+    width: 18px;
+  }
+  &--cart {
+    width: 21px;
+  }
+
 }
 
 @media (min-width: $tablet-width) {

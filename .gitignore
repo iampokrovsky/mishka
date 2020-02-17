@@ -10,3 +10,6 @@ npm-debug.*
 Thumbs.db
 
 specifications/
+
+source/test.html
+source/sass/blocks/features.scssga 
