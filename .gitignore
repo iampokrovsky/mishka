@@ -10,4 +10,4 @@ npm-debug.*
 Thumbs.db
 
 specifications/
-source/
+source/*/
