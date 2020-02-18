@@ -31,23 +31,38 @@
   position: relative;
 }
 
-.footer__copyright-text {
-  @include osbold(19px, 28px, #000000) box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.footer__copyright-link {
+  @include osbold(19px, 28px, #000000);
+  box-sizing: border-box;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-right: 64px;
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .footer__copyright-link {
-  box-sizing: border-box;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  right: -5px;
-  top: -3px;
+  &:hover .footer__copyright-image {
+    fill: #46c1ae;
+  }
+
+  &:active .footer__copyright-image {
+    fill: rgba(70, 193, 174, 0.3);
+  }
 }
 
 .footer__copyright-image {
-  @include responsive-image box-sizing: border-box;
+  @include responsive-image;
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -3px;
+  right: 2px;
+  fill: #63d1bb;
 }
 
 @media (min-width: $tablet-width) {

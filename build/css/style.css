@@ -31,9 +31,7 @@
           box-sizing: border-box;
   min-width: 320px;
   max-width: 1150px;
-  width: 320px;
-  width: 768px;
-  width: 1150px;
+  width: 100%;
   margin: 0 auto;
   border-left: 1px dotted black;
   border-right: 1px dotted black; }
@@ -209,7 +207,7 @@
   border-bottom: 1px solid #e7e7e7;
   position: relative; }
   .options__link:hover {
-    color: rgba(0, 0, 0, 0.6); }
+    color: rgba(124, 71, 71, 0.6); }
   .options__link:active {
     color: rgba(0, 0, 0, 0.3); }
 
@@ -1287,30 +1285,42 @@
   margin: 0 auto;
   position: relative; }
 
-.footer__copyright-text {
+.footer__copyright-link {
   font-size: 19px;
   line-height: 28px;
   font-family: "opensansbold", Arial, sans-serif;
   color: #000000;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding-right: 64px; }
+  .footer__copyright-link:active {
+    color: rgba(0, 0, 0, 0.3); }
 
-.footer__copyright-link {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  right: -5px;
-  top: -3px; }
+.footer__copyright-link:hover .footer__copyright-image {
+  fill: #46c1ae; }
+
+.footer__copyright-link:active .footer__copyright-image {
+  fill: rgba(70, 193, 174, 0.3); }
 
 .footer__copyright-image {
   max-width: 100%;
   height: auto;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: -3px;
+  right: 2px;
+  fill: #63d1bb; }
 
 @media (min-width: 768px) {
   .footer {
@@ -2438,5 +2448,17 @@
     left: 110px; }
   .order-form__bottom-wrapper {
     margin: 0 225px; } }
+
+.container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 320px;
+  max-width: 1150px;
+  width: 320px;
+  width: 768px;
+  width: 1150px;
+  margin: 0 auto;
+  border-left: 1px dotted black;
+  border-right: 1px dotted black; }
 
 /*# sourceMappingURL=style.css.map */

@@ -50,6 +50,15 @@ gulp.task("css", function () {
     .pipe(server.stream());
 });
 
+gulp.task("outline", function () {
+  return gulp.src([
+    "./source/css/outline.css"
+  ], {
+    base: "source"
+  })
+  .pipe(gulp.dest("./build"));
+});
+
 gulp.task("fonts", function () {
   return gulp.src([
     "./source/fonts/**/*.{woff,woff2}"
@@ -129,6 +138,7 @@ gulp.task("build",
     "clean",
     gulp.parallel(
       "html",
+      "outline",
       "css",
       "fonts",
       "scripts"

@@ -6,7 +6,7 @@
 }
 
 .options__link {
-  @include osbold(17px, 24px, #000000)
+  @include osbold(17px, 24px, #000000);
   box-sizing: border-box;
   min-height: 79px;
   padding: 20px 30px;
@@ -18,7 +18,7 @@
   position: relative;
 
   &:hover {
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(124, 71, 71, 0.6);
   }
 
   &:active {
