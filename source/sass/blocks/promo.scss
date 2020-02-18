@@ -1,5 +1,10 @@
 .promo {
   box-sizing: border-box;
+  padding-bottom: 6px;
+  background-image: url("../../img/bg-zigzag-line.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 319px 6px;
 }
 
 .promo__list {
@@ -7,19 +12,18 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-bottom: 15px;
-  background-image: url("../../img/bg-zigzag-line.svg");
-  background-position: bottom 0 left 0;
-  background-repeat: no-repeat;
-  background-size: 330px;
 }
 
 @media (min-width: $tablet-width) {
-  .promo__list {
-    padding-bottom: 24px;
-    background-size: 330px;
-    background-image: url("../../img/bg-zigzag-line.svg");
-    background-position: bottom 0 left 0;
-    background-size: 820px;
+  .promo {
+    padding-bottom: 15px;
+    background-size: 771px 15px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    padding-bottom: 23px;
+    background-size: 1050px 23px;
   }
 }

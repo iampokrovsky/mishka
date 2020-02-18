@@ -1,6 +1,6 @@
 .contacts {
   box-sizing: border-box;
-  padding: 42px 0 39px;
+  padding: 35px 0 39px;
 }
 
 .contacts__heading {
@@ -94,7 +94,11 @@
 
 @media (min-width: $tablet-width) {
   .contacts {
-    padding: 147px 0 57px;
+    padding: 63px 0 57px;
+    background-image: url(../img/icon-flag.svg);
+    background-repeat: no-repeat;
+    background-size: 47px 81px;
+    background-position: top 47px right 52px;
   }
 
   .contacts__heading {
@@ -124,7 +128,7 @@
   .contacts__map-link {
     width: 100%;
     background-color: #f1f1f1;
-    margin-bottom: 56px;
+    margin-bottom: 55px;
   }
 
   .contacts__map-image {
@@ -140,6 +144,7 @@
   .contacts {
     padding: 141px 525px 105px 175px;
     position: relative;
+    background-position: top 133px left 63px;
   }
 
   .contacts__heading {

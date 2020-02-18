@@ -1,6 +1,6 @@
 .promo-card {
   box-sizing: border-box;
-  padding: 27px 30px;
+  padding: 27px 30px 36px;
 }
 
 .promo-card__name-wrapper {
@@ -86,7 +86,7 @@
 
 @media (min-width: $tablet-width) {
   .promo-card {
-    padding: 46px 50px;
+    padding: 46px 50px 53px;
   }
 
   .promo-card__name-wrapper {
@@ -152,7 +152,7 @@
 
 @media (min-width: $desktop-width) {
   .promo-card {
-    padding: 126px 350px 70px 41px;
+    padding: 126px 350px 73px 41px;
     position: relative;
   }
 

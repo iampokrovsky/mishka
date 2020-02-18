@@ -1,6 +1,15 @@
+.reviews {
+  box-sizing: border-box;
+  padding-bottom: 38px;
+  background-image: url("../../img/bg-zigzag-line.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 319px 6px;
+}
+
 .reviews__wrapper {
   box-sizing: border-box;
-  padding: 13px 30px 44px;
+  padding: 13px 30px;
 }
 
 .reviews__heading {
@@ -8,7 +17,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .reviews__list {
@@ -16,7 +25,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 29px;
+  margin-bottom: 28px;
 }
 
 .reviews__item {
@@ -34,7 +43,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 
 .reviews__author-name {
@@ -86,6 +95,11 @@
 }
 
 @media (min-width: $tablet-width) {
+  .reviews {
+    padding-bottom: 84px;
+    background-size: 771px 15px;
+  }
+
   .reviews__wrapper {
     padding: 78px 50px 46px;
     position: relative;
@@ -146,6 +160,7 @@
 @media (min-width: $desktop-width) {
   .reviews {
     padding-bottom: 90px;
+    background-size: 1050px 23px;
   }
 
   .reviews__wrapper {

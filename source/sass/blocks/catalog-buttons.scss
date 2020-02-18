@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   margin-top: auto;
+  
 }
 
 .catalog-buttons__link {
@@ -62,9 +63,26 @@
 
   .catalog-buttons {
     display: flex;
+    position: relative;
+    z-index: 0;
+
+   &::after {
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 22px;
+    bottom: -12px;
+    z-index: 1;
+    background-image: url(../img/bg-zigzag-fill.svg);
+    background-repeat: no-repeat;
+    background-size: 768px 22px;
+    background-position: bottom;
+   }
   }
 
-  .catalog-button {
+  .catalog-buttons__item {
     width: 50%;
   }
 
@@ -73,23 +91,31 @@
     min-height: 117px;
     padding: 28px 35px;
     padding-right: 160px;
-    // width: 334px;
-
-    // &--interior {
-    //   background-position: top 50% right 38px;
-    // }
-
-    // &--toys {
-    //   background-position: top 50% right 34px;
-    // }
   }
+
+  .catalog-buttons__icon {
+    &--interior {
+      right: 36px;
+    }
+  
+    &--toys {
+      right: 33px;
+    }
+  }  
 }
 
 @media (min-width: $desktop-width) {
 
+  .catalog-buttons {
+   &::after {
+    height: 34px;
+    bottom: -19px;
+    background-size: 1250px 34px;
+   }
+  }
+
   .catalog-buttons__link {
     @include osbold(20px, 30px, #ffffff);
-    min-height: 117px;
     padding-right: 350px;
     width: 525px;
   }

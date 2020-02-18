@@ -28,7 +28,6 @@
   box-sizing: border-box;
   width: 184px;
   margin: 0 auto;
-  position: relative;
 }
 
 .footer__copyright-link {
@@ -38,7 +37,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  padding-right: 64px;
+  padding-right: 40px;
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
@@ -61,7 +60,7 @@
   height: 40px;
   position: absolute;
   top: -3px;
-  right: 2px;
+  right: -5px;
   fill: #63d1bb;
 }
 
@@ -111,11 +110,12 @@
     justify-content: flex-end;
   }
 
-  .footer__copyright-text {
-    margin-right: 56px;
+  .footer__copyright-link {
+    padding-right: 55px;
   }
 
-  .footer__copyright-link {
-    right: -8px;
+  .footer__copyright-image {
+    top: -4px;
+    right: -7px;
   }
 }
