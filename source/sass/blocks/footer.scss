@@ -3,6 +3,7 @@
   padding: 25px 30px 29px;
   position: relative;
   background-color: #f1f1f1;
+
   &::before {
     content: "";
     box-sizing: border-box;
@@ -31,8 +32,7 @@
 }
 
 .footer__copyright-text {
-  @include osbold(19px, 28px, #000000)
-  box-sizing: border-box;
+  @include osbold(19px, 28px, #000000) box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -47,8 +47,7 @@
 }
 
 .footer__copyright-image {
-  @include responsive-image
-  box-sizing: border-box;
+  @include responsive-image box-sizing: border-box;
 }
 
 @media (min-width: $tablet-width) {
@@ -58,6 +57,7 @@
     min-height: 143px;
     align-items: center;
     justify-content: space-between;
+
     &::before {
       display: none;
     }
@@ -74,6 +74,15 @@
     box-sizing: border-box;
     width: 102px;
     height: 34px;
+    fill: #000000;
+
+    &:hover {
+      fill: rgb(70, 193, 174);
+    }
+
+    &:active {
+      fill: rgba(70, 193, 174, 0.3);
+    }
   }
 
   .footer__social-links {
