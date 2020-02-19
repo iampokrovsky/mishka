@@ -17,12 +17,38 @@
   margin: 0;
   padding: 24px;
   padding-left: 88px;
+  background-image: url(../img/icon-video.svg);
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  background-position: 33px 30px;
 }
 
 .show-card__video {
   box-sizing: border-box;
   height: 150px;
   background-color: #ececec;
+  position: relative;
+  &::before {
+    box-sizing: border-box;
+    content: "";
+    position: absolute;
+    width: 101px;
+    height: 77px;
+    background-image: url(../img/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 101px 77px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.show-card__image {
+  @include responsive-image;
+  box-sizing: border-box;
+  width: 260px;
+  height: 150px;
 }
 
 .show-card__bottom-wrapper {
@@ -49,15 +75,23 @@
     height: 455px;
     background-color: #ececec;
     order: 1;
-    margin-bottom: 38px;
+    margin-bottom: 33px;
+  }
+
+  .show-card__image {
+    width: 668px;
+    height: 455px;
   }
 
   .show-card__heading {
     @include osbold(20px, 24px, #000000);
-    margin: 0 40px 32px;
+    margin: 0 40px 29px;
     padding: 0;
+    padding-top: 5px;
     padding-left: 64px;
     order: 2;
+    min-height: 32px;
+    background-position: 1px 0;
   }
 
   .show-card__bottom-wrapper {
@@ -89,9 +123,14 @@
     bottom: 0;
   }
 
+  .show-card__image {
+    width: 682px;
+  }
+
   .show-card__heading {
     padding: 49px 90px 0 0;
     margin-bottom: 33px;
+    background-position: 1px -5px;
   }
 
   .show-card__description {

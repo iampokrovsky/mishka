@@ -85,6 +85,10 @@
   display: none;
 }
 
+.order-form__type:checked ~ .order-form__type-label::after {
+  display: block;
+}
+
 .order-form__type-label {
   @include osbold(17px, 18px, #000000);
   box-sizing: border-box;
@@ -112,6 +116,7 @@
     height: 16px;
     border-radius: 50%;
     background-color: #62d1ba;
+    display: none;
   }
 }
 
@@ -138,6 +143,10 @@
   display: none;
 }
 
+.order-form__color:checked ~ .order-form__color-label::after {
+  display: block;
+}
+
 .order-form__color-label {
   @include osbold(17px, 18px, #000000);
   box-sizing: border-box;
@@ -152,6 +161,21 @@
     width: 40px;
     height: 39px;
     border: 2px solid #444444;
+  }
+  &::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 40px;
+    height: 39px;
+    background-image: url(../img/icon-tick.svg);
+    background-repeat: no-repeat;
+    background-size: 22px 16px;
+    background-position: center;
+    display: none;
   }
 }
 
@@ -246,6 +270,18 @@
   &:focus {
     outline: none;
     border-color: #62d1ba;
+  }
+  &--tel {
+    background-image: url(../img/icon-phone.svg);
+    background-repeat: no-repeat;
+    background-size: 25px 24px;
+    background-position: top 8px right 8px;
+  }
+  &--email {
+    background-image: url(../img/icon-mail.svg);
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    background-position: top 9px right 4px;
   }
 }
 
@@ -383,6 +419,11 @@
       width: 54px;
       height: 52px;
     }
+    &::after {
+      width: 54px;
+      height: 52px;
+      background-size: 33px 22px;
+    }
   }
 
   .order-form__name-item {
@@ -423,6 +464,12 @@
     @include osregular(19px, 20px, #444444);
     background-color: transparent;
     padding: 15px 18px;
+    &--tel {
+      background-position: top 10px right 26px;
+    }
+    &--email {
+      background-position: top 11px right 22px;
+    }
   }
 
   .order-form__text-label {
@@ -488,6 +535,15 @@
   }
   .order-form__contacts-label {
     left: -114px;
+  }
+
+  .order-form__contacts {
+    &--tel {
+      background-position: top 10px right 8px;
+    }
+    &--email {
+      background-position: top 10px right 4px;
+    }
   }
 
   .order-form__text-label {
