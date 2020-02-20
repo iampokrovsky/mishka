@@ -79,6 +79,15 @@
   border: 1px solid #e7e7e7;
   background-position: center;
   background-repeat: no-repeat;
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--back {
     background-image: url("../../img/icon-left-arrow.svg");

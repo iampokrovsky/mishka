@@ -64,6 +64,7 @@
   height: 52px;
   cursor: pointer;
   border: 2px solid #ececec;
+  transition: 0.1s ease-in-out;
   &:hover {
     border-color: #c7c7c7;
   }

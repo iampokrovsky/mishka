@@ -20,6 +20,7 @@
 
 .social-links__link-icon {
   fill: #000000;
+  transition: 0.1s ease-in-out;
 
   &:hover {
     fill: rgb(70, 193, 174);

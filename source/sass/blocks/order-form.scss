@@ -105,6 +105,12 @@
     border: 2px solid #444444;
     border-radius: 50%;
   }
+  &:hover::before {
+    border-color: #62d1ba;
+  }
+  &:active::before {
+    border-color: #c7c7c7;
+  }
   &::after {
     content: "";
     box-sizing: border-box;
@@ -162,6 +168,12 @@
     height: 39px;
     border: 2px solid #444444;
   }
+  &:hover::before {
+    border-color: #62d1ba;
+  }
+  &:active::before {
+    border-color: #c7c7c7;
+  }
   &::after {
     content: "";
     box-sizing: border-box;
@@ -212,9 +224,17 @@
   padding-top: 15px;
   padding-bottom: 15px;
   width: 100%;
+  cursor: pointer;
+  &:hover {
+    outline: none;
+    border-color: #62d1ba;
+  }
   &:focus {
     outline: none;
     border-color: #62d1ba;
+  }
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.3);
   }
 }
 
@@ -267,21 +287,44 @@
   padding-top: 15px;
   padding-bottom: 15px;
   width: 100%;
+  cursor: pointer;
+  &:hover {
+    outline: none;
+    border-color: #62d1ba;
+  }
   &:focus {
     outline: none;
     border-color: #62d1ba;
   }
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.order-form__contacts {
+  &:hover ~ .order-form__contacts-icon {
+    fill: #62d1ba;
+  }
+  &:focus ~ .order-form__contacts-icon {
+    fill: #62d1ba;
+  }
+}
+
+.order-form__contacts-icon {
+  box-sizing: border-box;
+  position: absolute;
+  fill: #cccccc;
   &--tel {
-    background-image: url(../img/icon-phone.svg);
-    background-repeat: no-repeat;
-    background-size: 25px 24px;
-    background-position: top 8px right 8px;
+    width: 25px;
+    height: 24px;
+    top: 8px;
+    right: 8px;
   }
   &--email {
-    background-image: url(../img/icon-mail.svg);
-    background-repeat: no-repeat;
-    background-size: 32px 32px;
-    background-position: top 9px right 4px;
+    width: 32px;
+    height: 32px;
+    top: 9px;
+    right: 9px;
   }
 }
 
@@ -303,9 +346,17 @@
   height: 142px;
   border: 2px solid #444444;
   padding: 15px;
+  cursor: pointer;
+  &:hover {
+    outline: none;
+    border-color: #62d1ba;
+  }
   &:focus {
     outline: none;
     border-color: #62d1ba;
+  }
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.3);
   }
 }
 

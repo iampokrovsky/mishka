@@ -4,6 +4,7 @@
   min-height: 374px;
   display: flex;
   flex-direction: column;
+  transition: 0.2s ease-in-out;
   &:not(:last-child) {
     margin-bottom: 30px;
   }
@@ -55,6 +56,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: 0.1s ease-in-out;
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .product-card__specifications {
