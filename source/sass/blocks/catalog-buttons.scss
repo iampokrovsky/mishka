@@ -16,6 +16,7 @@
   padding: 25px 30px;
   padding-right: 160px;
   position: relative;
+  transition: 0.1s ease-in-out;
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
@@ -46,6 +47,7 @@
   fill: rgba(20, 144, 128, 0.5);
   top: 50%;
   transform: translateY(-50%);
+  transition: 0.1s ease-in-out;
   &--interior {
     right: 35px;
     width: 40px;

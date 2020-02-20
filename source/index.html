@@ -1,20 +1,19 @@
 <!DOCTYPE html>
-<html
-  lang="ru"
-  class="page"
->
+<html lang="ru" class="page">
 
 <head class="page__head">
   <meta charset="UTF-8">
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мишка - интернет-магазин вязаных изделий для дома</title>
-  <link
-    rel="stylesheet"
-    href="./css/style.min.css"
-  >
+  <link rel="stylesheet" href="./css/style.min.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="./img/favicons/favicon.svg">
+  <link rel="manifest" href="./img/favicons/site.webmanifest">
+  <meta name="theme-color" content="#63d1bb">
+
   <!-- <link
     rel="stylesheet"
     href="./css/outline.css"
@@ -24,97 +23,54 @@
 <body class="page__body">
 
   <div style="display: none">
-    <include src="./source/img/sprite.svg"></include>
+    <include src="./build/img/sprite.svg"></include>
   </div>
 
   <header class="page__header container">
     <nav class="main-nav">
       <div class="main-nav__top-wrapper">
-        <a
-          class="main-nav__logo-link"
-          href="./index.html"
-        >
+        <a class="main-nav__logo-link" href="./index.html">
           <picture>
-            <source
-              media="(min-width: 1150px)"
-              srcset="./img/logo-desktop.svg"
-            >
-            <source
-              media="(min-width: 768px)"
-              srcset="./img/logo-tablet.svg"
-            >
-            <img
-              class="main-nav__logo-image"
-              src="./img/logo-mobile.svg"
-              alt="Мишка - интернет-магазин вязаных изделий для дома"
-            >
+            <source media="(min-width: 1150px)" srcset="./img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
+            <img class="main-nav__logo-image" src="./img/logo-mobile.svg"
+                 alt="Мишка - интернет-магазин вязаных изделий для дома">
           </picture>
         </a>
-        <button
-          class="main-nav__button main-nav__button--close"
-          type="button"
-        >
+        <button class="main-nav__button main-nav__button--close" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
       </div>
       <div class="main-nav__content">
         <ul class="main-nav__menu menu">
           <li class="menu__item menu__item--catalog">
-            <a
-              class="menu__link menu__link--catalog"
-              href="./catalog.html"
-            >Каталог товаров</a>
+            <a class="menu__link menu__link--catalog" href="./catalog.html">Каталог товаров</a>
           </li>
           <li class="menu__item menu__item--knitting">
-            <a
-              class="menu__link menu__link--knitting"
-              href="./form.html"
-            >Вязание на заказ</a>
+            <a class="menu__link menu__link--knitting" href="./form.html">Вязание на заказ</a>
           </li>
           <li class="menu__item menu__item--new">
-            <a
-              class="menu__link menu__link--new"
-              href=""
-            >Новые поступления</a>
+            <a class="menu__link menu__link--new" href="">Новые поступления</a>
           </li>
           <li class="menu__item menu__item--sale">
-            <a
-              class="menu__link menu__link--sale"
-              href=""
-            >Распродажа</a>
+            <a class="menu__link menu__link--sale" href="">Распродажа</a>
           </li>
         </ul>
         <div class="main-nav__toolbar">
           <ul class="main-nav__options options">
             <li class="options__item">
-              <a
-                class="options__link options__link--search"
-                href=""
-              >
-                <svg
-                  class="options__icon options__icon--search"
-                  aria-hidden="true"
-                  role="presentation"
-                  width="18"
-                  height="18"
-                >
+              <a class="options__link options__link--search" href="">
+                <svg class="options__icon options__icon--search" aria-hidden="true" role="presentation" width="18"
+                     height="18">
                   <use xlink:href="#icon-search"></use>
                 </svg>
                 <span class="options__text">Поиск по сайту</span>
               </a>
             </li>
             <li class="options__item">
-              <a
-                class="options__link options__link--cart"
-                href=""
-              >
-                <svg
-                  class="options__icon options__icon--cart"
-                  aria-hidden="true"
-                  role="presentation"
-                  width="21"
-                  height="18"
-                >
+              <a class="options__link options__link--cart" href="">
+                <svg class="options__icon options__icon--cart" aria-hidden="true" role="presentation" width="21"
+                     height="18">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
                 Корзина: пока пуста</a>
@@ -133,33 +89,17 @@
       <b class="main-сontent__slogan">Милые штуки ручной работы для дома</b>
       <ul class="main-сontent__catalog-buttons catalog-buttons">
         <li class="catalog-buttons__item">
-          <a
-            class="catalog-buttons__link catalog-buttons__link--interior"
-            href=""
-          >Предметы интерьера
-            <svg
-              class="catalog-buttons__icon catalog-buttons__icon--interior"
-              aria-hidden="true"
-              role="presentation"
-              width="40"
-              height="62"
-            >
+          <a class="catalog-buttons__link catalog-buttons__link--interior" href="">Предметы интерьера
+            <svg class="catalog-buttons__icon catalog-buttons__icon--interior" aria-hidden="true" role="presentation"
+                 width="40" height="62">
               <use xlink:href="#icon-interior"></use>
             </svg>
           </a>
         </li>
         <li class="catalog-buttons__item">
-          <a
-            class="catalog-buttons__link catalog-buttons__link--toys"
-            href=""
-          >Детские игрушки
-            <svg
-              class="catalog-buttons__icon catalog-buttons__icon--toys"
-              aria-hidden="true"
-              role="presentation"
-              width="60"
-              height="60"
-            >
+          <a class="catalog-buttons__link catalog-buttons__link--toys" href="">Детские игрушки
+            <svg class="catalog-buttons__icon catalog-buttons__icon--toys" aria-hidden="true" role="presentation"
+                 width="60" height="60">
               <use xlink:href="#icon-toy"></use>
             </svg>
           </a>
@@ -194,41 +134,21 @@
             </table>
             <p class="promo-card__image-wrapper">
               <picture>
-                <source
-                  type="image/webp"
-                  media="(min-width: 1150px)"
-                  srcset="./img/triple-set-desktop@2x.webp 2x, ./img/triple-set-desktop@1x.webp 1x"
-                >
-                <source
-                  media="(min-width: 1150px)"
-                  srcset="./img/triple-set-desktop@2x.jpg 2x, ./img/triple-set-desktop@1x.jpg"
-                >
-                <source
-                  type="image/webp"
-                  media="(min-width: 768px)"
-                  srcset="./img/triple-set-tablet@2x.webp 2x, ./img/triple-set-tablet@1x.webp 1x"
-                >
-                <source
-                  media="(min-width: 768px)"
-                  srcset="./img/triple-set-tablet@2x.jpg 2x, ./img/triple-set-tablet@1x.jpg"
-                >
-                <source
-                  type="image/webp"
-                  srcset="./img/triple-set-mobile@2x.webp 2x, ./img/triple-set-mobile@1x.webp"
-                >
-                <img
-                  class="promo-card__image"
-                  src="./img/triple-set-mobile@1x.jpg"
-                  srcset="./img/triple-set-mobile@2x.jpg 2x"
-                  alt="Вязаные корзинки"
-                >
+                <source type="image/webp" media="(min-width: 1150px)"
+                        srcset="./img/triple-set-desktop@2x.webp 2x, ./img/triple-set-desktop@1x.webp 1x">
+                <source media="(min-width: 1150px)"
+                        srcset="./img/triple-set-desktop@2x.jpg 2x, ./img/triple-set-desktop@1x.jpg">
+                <source type="image/webp" media="(min-width: 768px)"
+                        srcset="./img/triple-set-tablet@2x.webp 2x, ./img/triple-set-tablet@1x.webp 1x">
+                <source media="(min-width: 768px)"
+                        srcset="./img/triple-set-tablet@2x.jpg 2x, ./img/triple-set-tablet@1x.jpg">
+                <source type="image/webp" srcset="./img/triple-set-mobile@2x.webp 2x, ./img/triple-set-mobile@1x.webp">
+                <img class="promo-card__image" src="./img/triple-set-mobile@1x.jpg"
+                     srcset="./img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
               </picture>
             </p>
             <p class="promo-card__price">Цена: 990 руб.</p>
-            <button
-              class="product-card__button button button--border"
-              type="button"
-            >Заказать</button>
+            <button class="product-card__button button button--border" type="button">Заказать</button>
           </div>
         </li>
       </ul>
@@ -239,37 +159,22 @@
       <div class="features__wrapper">
         <ul class="features__list-left">
           <li class="features__item features__item--eco">
-            <svg
-              class="features__item-icon features__item-icon--eco"
-              aria-hidden="true"
-              role="presentation"
-              width="32"
-              height="37"
-            >
+            <svg class="features__item-icon features__item-icon--eco" aria-hidden="true" role="presentation" width="32"
+                 height="37">
               <use xlink:href="#icon-feature-flower"></use>
             </svg>
             Экологически чистые материалы
           </li>
           <li class="features__item features__item--style">
-            <svg
-              class="features__item-icon features__item-icon--style"
-              aria-hidden="true"
-              role="presentation"
-              width="47"
-              height="27"
-            >
+            <svg class="features__item-icon features__item-icon--style" aria-hidden="true" role="presentation"
+                 width="47" height="27">
               <use xlink:href="#icon-feature-money"></use>
             </svg>
             Скандинавский стиль по российской цене
           </li>
           <li class="features__item features__item--likes">
-            <svg
-              class="features__item-icon features__item-icon--likes"
-              aria-hidden="true"
-              role="presentation"
-              width="34"
-              height="27"
-            >
+            <svg class="features__item-icon features__item-icon--likes" aria-hidden="true" role="presentation"
+                 width="34" height="27">
               <use xlink:href="#icon-feature-heart"></use>
             </svg>
             Увеличивает лайки на фотографиях
@@ -277,37 +182,22 @@
         </ul>
         <ul class="features__list-right">
           <li class="features__item features__item--love">
-            <svg
-              class="features__item-icon features__item-icon--love"
-              aria-hidden="true"
-              role="presentation"
-              width="35"
-              height="34"
-            >
+            <svg class="features__item-icon features__item-icon--love" aria-hidden="true" role="presentation" width="35"
+                 height="34">
               <use xlink:href="#icon-feature-ball"></use>
             </svg>
             Связано вручную с любовью и умилением
           </li>
           <li class="features__item features__item--support">
-            <svg
-              class="features__item-icon features__item-icon--support"
-              aria-hidden="true"
-              role="presentation"
-              width="55"
-              height="23"
-            >
+            <svg class="features__item-icon features__item-icon--support" aria-hidden="true" role="presentation"
+                 width="55" height="23">
               <use xlink:href="#icon-feature-rocket"></use>
             </svg>
             Поддержка отечественного производителя
           </li>
           <li class="features__item features__item--gift">
-            <svg
-              class="features__item-icon features__item-icon--gift"
-              aria-hidden="true"
-              role="presentation"
-              width="33"
-              height="32"
-            >
+            <svg class="features__item-icon features__item-icon--gift" aria-hidden="true" role="presentation" width="33"
+                 height="32">
               <use xlink:href="#icon-feature-gift"></use>
             </svg>
             Поставляется в подарочной упаковке
@@ -334,23 +224,14 @@
           </li>
         </ul>
         <div class="reviews__controls">
-          <button
-            class="reviews__сontrol reviews__сontrol--back"
-            type="button"
-          >
+          <button class="reviews__сontrol reviews__сontrol--back" type="button">
             <span class="visually-hidden">Предыдущий отзыв</span>
           </button>
-          <button
-            class="reviews__сontrol reviews__сontrol--next"
-            type="button"
-          >
+          <button class="reviews__сontrol reviews__сontrol--next" type="button">
             <span class="visually-hidden">Следующий отзыв</span>
           </button>
         </div>
-        <a
-          class="reviews__feadback-button button button--border"
-          href=""
-        >Написать</a>
+        <a class="reviews__feadback-button button button--border" href="">Написать</a>
       </div>
     </section>
 
@@ -360,10 +241,7 @@
         <table class="contacts__email">
           <tr class="contacts__email-row">
             <th class="contacts__email-name">e-mail:</th>
-            <td class="contacts__email-value"><a
-                class="contacts__email-link"
-                href=""
-              >info@mimimishkashop.ru</a></td>
+            <td class="contacts__email-value"><a class="contacts__email-link" href="">info@mimimishkashop.ru</a></td>
           </tr>
         </table>
         <table class="contacts__address">
@@ -375,113 +253,53 @@
           </tr>
         </table>
       </div>
-      <a
-        class="contacts__map-link"
-        href=""
-      >
+      <a class="contacts__map-link" href="">
         <picture>
-          <source
-            type="image/webp"
-            media="(min-width: 1150px)"
-            srcset="./img/map-desktop@2x.webp 2x, ./img/map-desktop@1x.webp"
-          >
-          <source
-            media="(min-width: 1150px)"
-            srcset="./img/map-desktop@2x.jpg 2x, ./img/map-desktop@1x.jpg"
-          >
-          <source
-            type="image/webp"
-            media="(min-width: 768px)"
-            srcset="./img/map-tablet@2x.webp 2x, ./img/map-tablet@1x.webp"
-          >
-          <source
-            media="(min-width: 768px)"
-            srcset="./img/map-tablet@2x.jpg 2x, ./img/map-tablet@1x.jpg"
-          >
-          <source
-            type="image/webp"
-            srcset="./img/map-mobile@2x.webp 2x, ./img/map-mobile@1x.webp"
-          >
-          <img
-            class="contacts__map-image"
-            src="./img/map-mobile@1x.jpg"
-            srcset="./img/map-mobile@2x.jpg 2x"
-            alt="Мы находимся по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101"
-          >
+          <source type="image/webp" media="(min-width: 1150px)"
+                  srcset="./img/map-desktop@2x.webp 2x, ./img/map-desktop@1x.webp">
+          <source media="(min-width: 1150px)" srcset="./img/map-desktop@2x.jpg 2x, ./img/map-desktop@1x.jpg">
+          <source type="image/webp" media="(min-width: 768px)"
+                  srcset="./img/map-tablet@2x.webp 2x, ./img/map-tablet@1x.webp">
+          <source media="(min-width: 768px)" srcset="./img/map-tablet@2x.jpg 2x, ./img/map-tablet@1x.jpg">
+          <source type="image/webp" srcset="./img/map-mobile@2x.webp 2x, ./img/map-mobile@1x.webp">
+          <img class="contacts__map-image" src="./img/map-mobile@1x.jpg" srcset="./img/map-mobile@2x.jpg 2x"
+               alt="Мы находимся по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
         </picture>
       </a>
-      <a
-        class="contacts__write-button button button--border"
-        href=""
-      >Напишите нам</a>
+      <a class="contacts__write-button button button--border" href="">Напишите нам</a>
     </section>
 
   </main>
 
   <footer class="page__footer footer container">
     <div class="footer__logo-wrapper">
-      <a
-        class="footer__logo-link"
-        href=""
-        aria-label="Переход на главную страницу"
-      >
-        <svg
-          class="footer__logo-image"
-          role="img"
-          width="102"
-          height="34"
-        >
+      <a class="footer__logo-link" href="" aria-label="Переход на главную страницу">
+        <svg class="footer__logo-image" role="img" width="102" height="34">
           <use xlink:href="#icon-logo-footer"></use>
         </svg>
       </a>
     </div>
     <ul class="footer__social-links social-links">
       <li class="social-links__item">
-        <a
-          class="social-links__link social-links__link--instagram"
-          href=""
-          aria-label="Переход на страницу в Instagram"
-        >
-          <svg
-            class="social-links__link-icon social-links__link-icon--instagram"
-            role="img"
-            width="22"
-            height="21"
-          >
+        <a class="social-links__link social-links__link--instagram" href=""
+           aria-label="Переход на страницу в Instagram">
+          <svg class="social-links__link-icon social-links__link-icon--instagram" role="img" width="22" height="21">
             <use xlink:href="#icon-insta"></use>
           </svg>
           <span class="visually-hidden">Instagram</span>
         </a>
       </li>
       <li class="social-links__item">
-        <a
-          class="social-links__link social-links__link--facebook"
-          href=""
-          aria-label="Переход на страницу в Facebook"
-        >
-          <svg
-            class="social-links__link-icon social-links__link-icon--facebook"
-            role="img"
-            width="15"
-            height="28"
-          >
+        <a class="social-links__link social-links__link--facebook" href="" aria-label="Переход на страницу в Facebook">
+          <svg class="social-links__link-icon social-links__link-icon--facebook" role="img" width="15" height="28">
             <use xlink:href="#icon-fb"></use>
           </svg>
           <span class="visually-hidden">Facebook</span>
         </a>
       </li>
       <li class="social-links__item">
-        <a
-          class="social-links__link social-links__link--twitter"
-          href=""
-          aria-label="Переход на страницу в Twitter"
-        >
-          <svg
-            class="social-links__link-icon social-links__link-icon--twitter"
-            role="img"
-            width="23"
-            height="20"
-          >
+        <a class="social-links__link social-links__link--twitter" href="" aria-label="Переход на страницу в Twitter">
+          <svg class="social-links__link-icon social-links__link-icon--twitter" role="img" width="23" height="20">
             <use xlink:href="#icon-twitter"></use>
           </svg>
           <span class="visually-hidden">Twitter</span>
@@ -489,19 +307,10 @@
       </li>
     </ul>
     <div class="footer__copyright">
-      <a
-        class="footer__copyright-link"
-        href=""
-        aria-label="Переход на сайт HTML Academy"
-      >
+      <a class="footer__copyright-link" href="" aria-label="Переход на сайт HTML Academy">
         Разработано
 
-        <svg
-          class="footer__copyright-image"
-          role="img"
-          width="40"
-          height="40"
-        >
+        <svg class="footer__copyright-image" role="img" width="40" height="40">
           <use xlink:href="#icon-htmlacademy"></use>
         </svg>
       </a>
@@ -511,57 +320,22 @@
   <section class="page__modal modal">
     <h2 class="modal__heading">Добавить в корзину</h2>
     <p class="modal__text">Выберите размер:</p>
-    <form
-      class="modal__form"
-      action="https://echo.htmlacademy.ru"
-      method="post"
-    >
+    <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
       <ul class="modal__form-list">
         <li class="modal__form-item">
-          <input
-            class="modal__form-input"
-            type="radio"
-            name="size"
-            value="S"
-            id="size-s"
-            checked
-          >
-          <label
-            class="modal__form-label"
-            for="size-s"
-          >S</label>
+          <input class="modal__form-input" type="radio" name="size" value="S" id="size-s" checked>
+          <label class="modal__form-label" for="size-s">S</label>
         </li>
         <li class="modal__form-item">
-          <input
-            class="modal__form-input"
-            type="radio"
-            name="size"
-            value="M"
-            id="size-m"
-          >
-          <label
-            class="modal__form-label"
-            for="size-m"
-          >M</label>
+          <input class="modal__form-input" type="radio" name="size" value="M" id="size-m">
+          <label class="modal__form-label" for="size-m">M</label>
         </li>
         <li class="modal__form-item">
-          <input
-            class="modal__form-input"
-            type="radio"
-            name="size"
-            value="L"
-            id="size-l"
-          >
-          <label
-            class="modal__form-label"
-            for="size-l"
-          >L</label>
+          <input class="modal__form-input" type="radio" name="size" value="L" id="size-l">
+          <label class="modal__form-label" for="size-l">L</label>
         </li>
       </ul>
-      <button
-        class="modal__button button button--fill"
-        type="submit"
-      >Добавить</button>
+      <button class="modal__button button button--fill" type="submit">Добавить</button>
     </form>
   </section>
 

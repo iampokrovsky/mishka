@@ -16,6 +16,14 @@
   top: 22px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.main-nav__logo-image {
+  @include responsive-image;
+  box-sizing: border-box;
+  width: 86px;
+  height: 35px;
+  transition: 0.1s ease-in-out;
 
   &:hover {
     opacity: 0.6;
@@ -24,13 +32,6 @@
   &:active {
     opacity: 0.3;
   }
-}
-
-.main-nav__logo-image {
-  @include responsive-image;
-  box-sizing: border-box;
-  width: 86px;
-  height: 35px;
 }
 
 .main-nav__button {
@@ -133,7 +134,7 @@
   }
 
   .main-nav__delivery {
-    @include osregular(15px, 24px, #444444)
+    @include osregular(15px, 24px, #444444);
     box-sizing: border-box;
     display: block;
     align-self: flex-end;
