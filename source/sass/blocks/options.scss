@@ -76,6 +76,12 @@
     }
   }
 
+  .options__icon {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+  }
+
   .options__text {
     @include visually-hidden;
   }

@@ -73,12 +73,20 @@
   padding: 0;
 }
 
+.contacts__map-wrapper {
+  box-sizing: border-box;
+  display: block;
+  height: 457px;
+  margin-bottom: 39px;
+  background-color: #f1f1f1;
+}
+
 .contacts__map-link {
   box-sizing: border-box;
   display: block;
   width: 322px;
   height: 457px;
-  margin-bottom: 39px;
+  margin: 0 auto;
 }
 
 .contacts__map-image {
@@ -126,10 +134,13 @@
     margin: 0;
   }
 
-  .contacts__map-link {
+  .contacts__map-wrapper {
     width: 100%;
-    background-color: #f1f1f1;
     margin-bottom: 55px;
+  }
+
+  .contacts__map-link {
+    width: 768px;
   }
 
   .contacts__map-image {
@@ -168,11 +179,15 @@
   .contacts__address {
     margin-right: auto;
   }
-
-  .contacts__map-link {
+  
+  .contacts__map-wrapper {
     position: absolute;
     top: 71px;
     right: 0;
+    width: 525px;
+  }
+
+  .contacts__map-link {
     width: 525px;
   }
 
