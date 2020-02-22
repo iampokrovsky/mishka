@@ -224,6 +224,7 @@
   padding-top: 15px;
   padding-bottom: 15px;
   width: 100%;
+  border-radius: unset;
   cursor: pointer;
   &:hover {
     outline: none;
@@ -288,6 +289,7 @@
   padding-bottom: 15px;
   width: 100%;
   cursor: pointer;
+  border-radius: unset;
   &:hover {
     outline: none;
     border-color: #62d1ba;
@@ -347,6 +349,7 @@
   border: 2px solid #444444;
   padding: 15px;
   cursor: pointer;
+  border-radius: unset;
   &:hover {
     outline: none;
     border-color: #62d1ba;
@@ -458,7 +461,7 @@
     min-height: 52px;
     width: 212px;
     padding-left: 82px;
-    margin-right: 50px;
+    margin-right: 9.487666034155598%;
     &:not(:last-child) {
       margin-bottom: 24px;
     }
@@ -589,6 +592,12 @@
       top: 64px;
     }
   }
+
+  .order-form__color-item {
+    margin-right: 50px;
+  }
+
+
   .order-form__contacts-label {
     left: -114px;
   }

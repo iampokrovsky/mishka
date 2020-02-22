@@ -1303,6 +1303,8 @@
     margin: 0; }
   .contacts__map-wrapper {
     margin-bottom: 55px; }
+  .contacts__map-link {
+    width: 768px; }
   .contacts__map-image {
     width: 768px; }
   .contacts__write-button {
@@ -1337,6 +1339,8 @@
     top: 71px;
     right: 0;
     width: 525px; }
+  .contacts__map-link {
+    width: auto; }
   .contacts__map-image {
     width: 525px; }
   .contacts__write-button {
@@ -2372,6 +2376,7 @@
   padding-top: 15px;
   padding-bottom: 15px;
   width: 100%;
+  border-radius: unset;
   cursor: pointer; }
   .order-form__name:hover {
     outline: none;
@@ -2444,7 +2449,8 @@
   padding-top: 15px;
   padding-bottom: 15px;
   width: 100%;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: unset; }
   .order-form__contacts:hover {
     outline: none;
     border-color: #62d1ba; }
@@ -2509,7 +2515,8 @@
   height: 142px;
   border: 2px solid #444444;
   padding: 15px;
-  cursor: pointer; }
+  cursor: pointer;
+  border-radius: unset; }
   .order-form__text:hover {
     outline: none;
     border-color: #62d1ba; }
@@ -2612,7 +2619,7 @@
     min-height: 52px;
     width: 212px;
     padding-left: 82px;
-    margin-right: 50px; }
+    margin-right: 9.487666034155598%; }
     .order-form__color-item:not(:last-child) {
       margin-bottom: 24px; }
   .order-form__color-label {
@@ -2725,6 +2732,8 @@
       top: 62px; }
     .order-form__legend--name {
       top: 64px; }
+  .order-form__color-item {
+    margin-right: 50px; }
   .order-form__contacts-label {
     left: -114px; }
   .order-form__contacts-icon--tel {
