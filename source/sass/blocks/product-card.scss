@@ -16,11 +16,18 @@
   }
 }
 
+.product-card__image-wrapper {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
 .product-card__image-link {
   box-sizing: border-box;
   display: block;
-  height: 195px;
-  background-color: lightgrey;
+  width: 260px;
+  margin: 0 auto;
 }
 
 .product-card__image {
@@ -122,8 +129,7 @@
   }
 
   .product-card__image-link {
-    width: 333px;
-    height: 334px;
+    width: 334px;
     flex-shrink: 0;
   }
 
@@ -156,7 +162,6 @@
 
   .product-card__image-link {
     width: 316px;
-    height: 462px;
   }
 
   .product-card__image {

@@ -75,8 +75,9 @@
 
 .contacts__map-wrapper {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   display: block;
-  height: 457px;
   margin-bottom: 39px;
   background-color: #f1f1f1;
 }
@@ -85,7 +86,6 @@
   box-sizing: border-box;
   display: block;
   width: 322px;
-  height: 457px;
   margin: 0 auto;
 }
 
@@ -135,12 +135,7 @@
   }
 
   .contacts__map-wrapper {
-    width: 100%;
     margin-bottom: 55px;
-  }
-
-  .contacts__map-link {
-    width: 768px;
   }
 
   .contacts__map-image {
@@ -184,10 +179,6 @@
     position: absolute;
     top: 71px;
     right: 0;
-    width: 525px;
-  }
-
-  .contacts__map-link {
     width: 525px;
   }
 

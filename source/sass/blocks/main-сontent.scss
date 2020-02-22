@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   background-image: url("../../img/hero-mobile@1x.jpg");
-  background-position: center -5.625%;
+  background-position: center -18px;
   background-repeat: no-repeat;
   background-size: 179.6875% auto;
   @media (min-resolution: 1.5dppx) {
@@ -32,7 +32,7 @@
     padding: 0 50px;
     background-image: url("../../img/hero-tablet@1x.jpg");
     background-position: center -1px;
-    background-size: 1150px auto;
+    background-size: 149.7395833333333% auto;
     @media (min-resolution: 1.5dppx) {
       background-image: url("../../img/hero-tablet@2x.jpg");
     }
@@ -54,6 +54,7 @@
     min-height: 743px;
     padding: 0;
     background-image: url("../../img/hero-desktop@1x.jpg");
+    background-size: 100% auto;
     @media (min-resolution: 1.5dppx) {
       background-image: url("../../img/hero-desktop@2x.jpg");
     }

@@ -1,6 +1,5 @@
 .show-card {
   box-sizing: border-box;
-  min-height: 503px;
   border: 1px solid #ececec;
   overflow: hidden;
     transition: 0.2s ease-in-out;
@@ -26,9 +25,17 @@
 
 .show-card__video {
   box-sizing: border-box;
+  width: 260px;
   height: 150px;
-  background-color: #ececec;
   position: relative;
+  margin: 0 auto;
+}
+
+.show-card__image {
+  @include responsive-image;
+  box-sizing: border-box;
+  width: 260px;
+  height: 150px;
 }
 
 .show-card__play-button {
@@ -55,13 +62,6 @@
   }
 }
 
-.show-card__image {
-  @include responsive-image;
-  box-sizing: border-box;
-  width: 260px;
-  height: 150px;
-}
-
 .show-card__bottom-wrapper {
   box-sizing: border-box;
   padding: 27px 32px;
@@ -77,14 +77,13 @@
 
 @media (min-width: $tablet-width) {
   .show-card {
-    min-height: 743px;
     display: flex;
     flex-direction: column;
   }
 
   .show-card__video {
+    width: 668px;
     height: 455px;
-    background-color: #ececec;
     order: 1;
     margin-bottom: 33px;
   }
@@ -96,17 +95,16 @@
 
   .show-card__heading {
     @include osbold(20px, 24px, #000000);
-    margin: 0 40px 29px;
+    margin: 0 40px 32px;
     padding: 0;
     padding-top: 5px;
     padding-left: 64px;
     order: 2;
-    min-height: 32px;
     background-position: 1px 0;
   }
 
   .show-card__bottom-wrapper {
-    padding: 0 40px;
+    padding: 0 40px 45px;
     order: 3;
   }
 
