@@ -1,25 +1,20 @@
 $mobile-width: 320px;
-
 $tablet-width: 6000px;
-
 $tablet-width: 768px;
-
 $desktop-width: 6000px;
-
 $desktop-width: 1150px;
 
-.container
-{
-    box-sizing: border-box;
-    // width: 320px;
-    // width: 768px;
-    // width: 1150px;
-    width: 100%;
-    min-width: 320px;
-    max-width: 1150px;
-    margin: 0 auto;
-    // border-left: 1px dotted black;
-    // border-right: 1px dotted black;
+.container {
+  box-sizing: border-box;
+  // width: 320px;
+  // width: 768px;
+  // width: 1150px;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1150px;
+  margin: 0 auto;
+  // border-left: 1px dotted black;
+  // border-right: 1px dotted black;
 }
 
 // @media (min-width: $tablet-width) {

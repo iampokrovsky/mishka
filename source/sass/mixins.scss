@@ -1,42 +1,35 @@
-@mixin responsive-image
-{
-    max-width: 100%;
-    height: auto;
+@mixin responsive-image {
+  max-width: 100%;
+  height: auto;
 }
 
-@mixin visually-hidden
-{
-    position: absolute;
+@mixin visually-hidden {
+  position: absolute;
 
-    overflow: hidden;
-    clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
 
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
+  white-space: nowrap;
 
-    white-space: nowrap;
+  border: 0;
 
-    border: 0;
-
-    clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
 }
 
-@mixin osregular($font-size, $line-height, $color)
-{
-    font-family: 'opensansregular', Arial, sans-serif;
-    font-size: $font-size;
-    line-height: $line-height;
-
-    color: $color;
+@mixin osregular($font-size, $line-height, $color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: "opensansregular", "Arial", sans-serif;
+  color: $color;
 }
 
-@mixin osbold($font-size, $line-height, $color)
-{
-    font-family: 'opensansbold', Arial, sans-serif;
-    font-size: $font-size;
-    line-height: $line-height;
-
-    color: $color;
+@mixin osbold($font-size, $line-height, $color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: "opensansbold", "Arial", sans-serif;
+  color: $color;
 }

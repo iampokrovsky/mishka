@@ -1,42 +1,43 @@
-.button
-{
-    font-family: 'opensansbold', Arial, sans-serif;
-    font-size: 17px;
-    line-height: 20px;
+.button {
+  display: block;
+  box-sizing: border-box;
+  padding: 14px;
 
-    display: block;
+  font-size: 17px;
+  line-height: 20px;
+  font-family: "opensansbold", "Arial", sans-serif;
+  vertical-align: center;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
 
-    box-sizing: border-box;
-    padding: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
 
-    cursor: pointer;
-    transition: .1s ease-in-out;
-    text-align: center;
-    vertical-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
+  transition: 0.1s ease-in-out;
 
-    border: none;
-    background: none;
+  &--border {
+    color: #444444;
 
-    &--border
-    {
-        color: #444;
-        border: 2px solid #444;
-    }
-    &--border:hover
-    {
-        color: #fff;
-        background-color: #444;
-    }
-    &--border:active
-    {
-        color: rgba(255, 255, 255, .3);
-        background-color: #444;
-    }
-    &--fill
-    {
-        color: #fff;
-        background-color: #63d1bb;
-    }
+    border: 2px solid #444444;
+  }
+
+  &--border:hover {
+    color: #ffffff;
+
+    background-color: #444444;
+  }
+
+  &--border:active {
+    color: rgba(255, 255, 255, 0.3);
+
+    background-color: #444444;
+  }
+
+  &--fill {
+    color: #ffffff;
+
+    background-color: #63d1bb;
+  }
 }

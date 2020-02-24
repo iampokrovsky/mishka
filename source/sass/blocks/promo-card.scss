@@ -1,280 +1,239 @@
-.promo-card
-{
-    box-sizing: border-box;
-    padding: 27px 30px 36px;
+.promo-card {
+  box-sizing: border-box;
+  padding: 27px 30px 36px;
 }
 
-.promo-card__name-wrapper
-{
-    box-sizing: border-box;
-    margin-bottom: 24px;
+.promo-card__name-wrapper {
+  box-sizing: border-box;
+  margin-bottom: 24px;
 }
 
-.promo-card__name
-{
-    box-sizing: border-box;
+.promo-card__name {
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+
+  @include osbold(25px, 30px, #000000);
+}
+
+.promo-card__label {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  text-transform: uppercase;
+
+  @include osbold(17px, 20px, #63d1bb);
+}
+
+.promo-card__description {
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+
+  @include osregular(15px, 24px, #444444);
+}
+
+.promo-card__specifications {
+  box-sizing: border-box;
+  margin-bottom: 26px;
+
+  border-collapse: collapse;
+}
+
+.promo-card__specifications-row {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.promo-card__feature {
+  padding: 10px 0;
+  padding-right: 28px;
+
+  font-weight: normal;
+
+  @include osregular(15px, 20px, #444444);
+}
+
+.promo-card__value {
+  padding: 10px 0;
+
+  @include osregular(15px, 20px, #444444);
+}
+
+.promo-card__image-wrapper {
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+
+  background-color: #f1f1f1;
+}
+
+.promo-card__image {
+  display: block;
+  box-sizing: border-box;
+  width: 260px;
+  height: 315px;
+  margin: 0 auto;
+
+  @include responsive-image;
+}
+
+.promo-card__price {
+  box-sizing: border-box;
+  width: 260px;
+  margin: 0 auto;
+  margin-bottom: 26px;
+  padding: 0;
+
+  text-align: center;
+
+  @include osbold(17px, 24px, #444444);
+}
+
+.product-card__order-button {
+  width: 260px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .promo-card {
+    padding: 46px 50px 53px;
+  }
+
+  .promo-card__name-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  .promo-card__name {
     margin: 0;
-    margin-bottom: 5px;
-    padding: 0;
 
-    @include osbold(25px, 30px, #000);
-}
+    @include osbold(43px, 50px, #000000);
+  }
 
-.promo-card__label
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
-    text-transform: uppercase;
-
-    @include osbold(17px, 20px, #63d1bb);
-}
-
-.promo-card__description
-{
-    box-sizing: border-box;
-    margin: 0;
-    margin-bottom: 16px;
-    padding: 0;
-
-    @include osregular(15px, 24px, #444);
-}
-
-.promo-card__specifications
-{
-    box-sizing: border-box;
-    margin-bottom: 26px;
-
-    border-collapse: collapse;
-}
-
-.promo-card__specifications-row
-{
-    border-bottom: 1px solid #e7e7e7;
-}
-
-.promo-card__feature
-{
-    font-weight: normal;
-
-    padding: 10px 0;
-    padding-right: 28px;
-
-    @include osregular(15px, 20px, #444);
-}
-
-.promo-card__value
-{
-    padding: 10px 0;
-
-    @include osregular(15px, 20px, #444);
-}
-
-.promo-card__image-wrapper
-{
-    box-sizing: border-box;
-    margin: 0;
-    margin-bottom: 24px;
-    padding: 0;
-
-    background-color: #f1f1f1;
-}
-
-.promo-card__image
-{
-    display: block;
-
-    box-sizing: border-box;
-    width: 260px;
-    height: 315px;
-    margin: 0 auto;
-
-    @include responsive-image;
-}
-
-.promo-card__price
-{
-    box-sizing: border-box;
-    width: 260px;
-    margin: 0 auto;
-    margin-bottom: 26px;
-    padding: 0;
+  .promo-card__label {
+    width: 80px;
+    margin-top: 12px;
+    margin-right: 20px;
 
     text-align: center;
 
-    @include osbold(17px, 24px, #444);
-}
+    @include osbold(17px, 17px, #63d1bb);
+  }
 
-.product-card__order-button
-{
-    width: 260px;
+  .promo-card__content-wrapper {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 412px;
+    padding-right: 56.2874251497006%;
+  }
+
+  .promo-card__description {
+    margin-bottom: 34px;
+
+    @include osregular(17px, 30px, #444444);
+  }
+
+  .promo-card__specifications {
+    margin-bottom: 54px;
+  }
+
+  .promo-card__feature {
+    padding-right: 28px;
+  }
+
+  .promo-card__price {
+    width: 292px;
+    margin: auto 0 35px;
+
+    @include osbold(20px, 24px, #444444);
+  }
+
+  .product-card__order-button {
+    width: 292px;
+    margin: 0;
+    margin-right: auto;
+  }
+
+  .promo-card__image-wrapper {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    left: 50%;
+
+    height: 404px;
+    margin: 0;
+  }
+
+  .promo-card__image {
+    width: 333px;
+    height: 404px;
     margin: 0 auto;
+  }
 }
 
-@media (min-width: $tablet-width)
-{
-    .promo-card
-    {
-        padding: 46px 50px 53px;
-    }
+@media (min-width: $desktop-width) {
+  .promo-card {
+    position: relative;
 
-    .promo-card__name-wrapper
-    {
-        display: flex;
+    padding: 126px 350px 73px 41px;
+  }
 
-        margin-bottom: 50px;
+  .promo-card__name-wrapper {
+    margin-bottom: 48px;
+  }
 
-        justify-content: space-between;
-    }
+  .promo-card__name {
+    order: 2;
 
-    .promo-card__name
-    {
-        margin: 0;
+    @include osbold(53px, 57px, #000000);
+  }
 
-        @include osbold(43px, 50px, #000);
-    }
+  .promo-card__label {
+    order: 1;
+    margin-top: 14px;
+    margin-right: 0;
+  }
 
-    .promo-card__label
-    {
-        width: 80px;
-        margin-top: 12px;
-        margin-right: 20px;
+  .promo-card__content-wrapper {
+    position: static;
 
-        text-align: center;
+    width: 292px;
+    margin-right: auto;
+    margin-left: 133px;
+    padding-right: 0;
+  }
 
-        @include osbold(17px, 17px, #63d1bb);
-    }
+  .promo-card__description {
+    margin-bottom: 46px;
+  }
 
-    .promo-card__content-wrapper
-    {
-        position: relative;
+  .promo-card__specifications {
+    margin-bottom: 108px;
+  }
 
-        display: flex;
-        flex-direction: column;
+  .promo-card__price {
+    margin-right: 58px;
+    margin-bottom: 35px;
+  }
 
-        min-height: 412px;
-        padding-right: 56.2874251497006%;
-    }
+  .promo-card__image-wrapper {
+    top: 73px;
+    right: 0;
+    z-index: -1;
 
-    .promo-card__description
-    {
-        margin-bottom: 34px;
+    width: 525px;
+    height: 636px;
+  }
 
-        @include osregular(17px, 30px, #444);
-    }
-
-    .promo-card__specifications
-    {
-        margin-bottom: 54px;
-    }
-
-    .promo-card__feature
-    {
-        padding-right: 28px;
-    }
-
-    .promo-card__price
-    {
-        width: 292px;
-        margin: auto 0 35px;
-
-        @include osbold(20px, 24px, #444);
-    }
-
-    .product-card__order-button
-    {
-        width: 292px;
-        margin: 0;
-        margin-right: auto;
-    }
-
-    .promo-card__image-wrapper
-    {
-        position: absolute;
-        top: 8px;
-        right: 0;
-        left: 50%;
-
-        height: 404px;
-        margin: 0;
-    }
-
-    .promo-card__image
-    {
-        width: 333px;
-        height: 404px;
-        margin: 0 auto;
-    }
-}
-
-@media (min-width: $desktop-width)
-{
-    .promo-card
-    {
-        position: relative;
-
-        padding: 126px 350px 73px 41px;
-    }
-
-    .promo-card__name-wrapper
-    {
-        margin-bottom: 48px;
-    }
-
-    .promo-card__name
-    {
-        @include osbold(53px, 57px, #000);
-        order: 2;
-    }
-
-    .promo-card__label
-    {
-        margin-top: 14px;
-        margin-right: 0;
-
-        order: 1;
-    }
-
-    .promo-card__content-wrapper
-    {
-        position: static;
-
-        width: 292px;
-        margin-right: auto;
-        margin-left: 133px;
-        padding-right: 0;
-    }
-
-    .promo-card__description
-    {
-        margin-bottom: 46px;
-    }
-
-    .promo-card__specifications
-    {
-        margin-bottom: 108px;
-    }
-
-    .promo-card__price
-    {
-        margin-right: 58px;
-        margin-bottom: 35px;
-    }
-
-    .promo-card__image-wrapper
-    {
-        z-index: -1;
-        top: 73px;
-        right: 0;
-
-        width: 525px;
-        height: 636px;
-    }
-
-    .promo-card__image
-    {
-        width: 525px;
-        height: 636px;
-    }
+  .promo-card__image {
+    width: 525px;
+    height: 636px;
+  }
 }

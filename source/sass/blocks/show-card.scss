@@ -1,192 +1,170 @@
-.show-card
-{
-    overflow: hidden;
+.show-card {
+  box-sizing: border-box;
+  overflow: hidden;
 
-    box-sizing: border-box;
+  border: 1px solid #ececec;
 
-    transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 
-    border: 1px solid #ececec;
-    &:hover
-    {
-        box-shadow: 0 15px 10px -10px rgba(0, 0, 0, .3);
-    }
-    &:active
-    {
-        box-shadow: 0 15px 10px -15px rgba(0, 0, 0, .3);
-    }
+  &:hover {
+    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    box-shadow: 0 15px 10px -15px rgba(0, 0, 0, 0.3);
+  }
 }
 
-.show-card__heading
-{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 24px;
-    padding-left: 88px;
+.show-card__heading {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 24px;
+  padding-left: 88px;
 
-    background-image: url(../img/icon-video.svg);
-    background-repeat: no-repeat;
-    background-position: 33px 30px;
-    background-size: 32px 32px;
+  background-image: url("../img/icon-video.svg");
+  background-repeat: no-repeat;
+  background-position: 33px 30px;
+  background-size: 32px 32px;
 
-    @include osbold(17px, 24px, #000);
+  @include osbold(17px, 24px, #000000);
 }
 
-.show-card__video
-{
+.show-card__video {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 260px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.show-card__image {
+  box-sizing: border-box;
+  width: 260px;
+  height: 150px;
+
+  @include responsive-image;
+}
+
+.show-card__play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  box-sizing: border-box;
+  width: 101px;
+  height: 77px;
+
+  background-image: url("../img/icon-play.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 101px 77px;
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+
+    transition: 0.1s ease-in-out;
+  }
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.3;
+
+    transition: 0.1s ease-in-out;
+  }
+}
+
+.show-card__bottom-wrapper {
+  box-sizing: border-box;
+  padding: 27px 32px;
+}
+
+.show-card__description {
+  box-sizing: border-box;
+  margin: 0;
+  margin-bottom: 25px;
+  padding: 0;
+
+  @include osregular(13px, 24px, #444444);
+}
+
+@media (min-width: $tablet-width) {
+  .show-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .show-card__video {
+    order: 1;
+    width: 668px;
+    height: 455px;
+    margin-bottom: 33px;
+  }
+
+  .show-card__image {
+    width: 668px;
+    height: 455px;
+  }
+
+  .show-card__heading {
+    order: 2;
+    margin: 0 40px 32px;
+    padding: 0;
+    padding-top: 5px;
+    padding-left: 64px;
+
+    background-position: 1px 0;
+
+    @include osbold(20px, 24px, #000000);
+  }
+
+  .show-card__bottom-wrapper {
+    order: 3;
+    padding: 0 40px 45px;
+  }
+
+  .show-card__description {
+    margin-bottom: 35px;
+
+    @include osregular(15px, 30px, #444444);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .show-card {
     position: relative;
 
-    box-sizing: border-box;
-    width: 260px;
-    height: 150px;
-    margin: 0 auto;
-}
+    height: 455px;
+    min-height: auto;
+    padding: 46px 16px 46px 720px;
+  }
 
-.show-card__image
-{
-    box-sizing: border-box;
-    width: 260px;
-    height: 150px;
-
-    @include responsive-image;
-}
-
-.show-card__play-button
-{
+  .show-card__video {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
 
-    box-sizing: border-box;
-    width: 101px;
-    height: 77px;
-
-    transition: .1s ease-in-out;
-    transform: translate(-50%, -50%) scale(1);
-
-    background-image: url(../img/icon-play.svg);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 101px 77px;
-    &:hover
-    {
-        transition: .1s ease-in-out;
-        transform: translate(-50%, -50%) scale(1.2);
-    }
-    &:active
-    {
-        transition: .1s ease-in-out;
-        transform: translate(-50%, -50%) scale(.8);
-
-        opacity: .3;
-    }
-}
-
-.show-card__bottom-wrapper
-{
-    box-sizing: border-box;
-    padding: 27px 32px;
-}
-
-.show-card__description
-{
-    box-sizing: border-box;
+    width: 680px;
+    height: 455px;
     margin: 0;
-    margin-bottom: 25px;
-    padding: 0;
+  }
 
-    @include osregular(13px, 24px, #444);
-}
+  .show-card__image {
+    width: 682px;
+  }
 
-@media (min-width: $tablet-width)
-{
-    .show-card
-    {
-        display: flex;
-        flex-direction: column;
-    }
+  .show-card__heading {
+    margin-bottom: 33px;
+    padding: 49px 90px 0 0;
 
-    .show-card__video
-    {
-        width: 668px;
-        height: 455px;
-        margin-bottom: 33px;
+    background-position: 1px -5px;
+  }
 
-        order: 1;
-    }
-
-    .show-card__image
-    {
-        width: 668px;
-        height: 455px;
-    }
-
-    .show-card__heading
-    {
-        margin: 0 40px 32px;
-        padding: 0;
-        padding-top: 5px;
-        padding-left: 64px;
-
-        background-position: 1px 0;
-
-        @include osbold(20px, 24px, #000);
-        order: 2;
-    }
-
-    .show-card__bottom-wrapper
-    {
-        padding: 0 40px 45px;
-
-        order: 3;
-    }
-
-    .show-card__description
-    {
-        margin-bottom: 35px;
-
-        @include osregular(15px, 30px, #444);
-    }
-}
-
-@media (min-width: $desktop-width)
-{
-    .show-card
-    {
-        position: relative;
-
-        height: 455px;
-        min-height: auto;
-        padding: 46px 16px 46px 720px;
-    }
-
-    .show-card__video
-    {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-
-        width: 680px;
-        height: 455px;
-        margin: 0;
-    }
-
-    .show-card__image
-    {
-        width: 682px;
-    }
-
-    .show-card__heading
-    {
-        margin-bottom: 33px;
-        padding: 49px 90px 0 0;
-
-        background-position: 1px -5px;
-    }
-
-    .show-card__description
-    {
-        margin-bottom: 46px;
-    }
+  .show-card__description {
+    margin-bottom: 46px;
+  }
 }
