@@ -1,23 +1,30 @@
-.show {
-  box-sizing: border-box;
-  padding: 0 30px 59px;
+.show
+{
+    box-sizing: border-box;
+    padding: 0 30px 59px;
 }
 
-.show__list {
-  box-sizing: border-box;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.show__list
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
 }
 
-@media (min-width: $tablet-width) {
-  .show {
-    padding: 3px 50px 63px;
-  }
+@media (min-width: $tablet-width)
+{
+    .show
+    {
+        padding: 3px 50px 63px;
+    }
 }
 
-@media (min-width: $desktop-width) {
-  .show {
-    padding-bottom: 105px;
-  }
+@media (min-width: $desktop-width)
+{
+    .show
+    {
+        padding-bottom: 105px;
+    }
 }

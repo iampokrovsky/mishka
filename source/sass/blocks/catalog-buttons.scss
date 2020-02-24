@@ -1,124 +1,161 @@
-.catalog-buttons {
-  box-sizing: border-box;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-top: auto;
-  
+.catalog-buttons
+{
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: auto;
+    padding: 0;
+
+    list-style: none;
 }
 
-.catalog-buttons__link {
-  @include osbold(19px, 24px, #ffffff);
-  box-sizing: border-box;
-  display: block;
-  text-decoration: none;
-  min-height: 103px;
-  padding: 25px 30px;
-  padding-right: 160px;
-  position: relative;
-  transition: 0.1s ease-in-out;
-  display: flex;
-  align-items: center;
-
-  &:active {
-    color: rgba(255, 255, 255, 0.3);
-  }
-
-  &--interior {
-    background-color: #63d1bb;
-  }
-
-  &--toys {
-    background-color: #56c3b2;
-  }
-}
-
-.catalog-buttons__link {
-  &:hover .catalog-buttons__icon {
-    fill: rgba(20, 144, 128, 0.7);
-  }
-
-  &:active .catalog-buttons__icon {
-    fill: rgba(20, 144, 128, 0.3);
-  }
-}
-
-.catalog-buttons__icon {
-  box-sizing: border-box;
-  position: absolute;
-  fill: rgba(20, 144, 128, 0.5);
-  top: 50%;
-  transform: translateY(-50%);
-  transition: 0.1s ease-in-out;
-  &--interior {
-    right: 35px;
-    width: 40px;
-    height: 62px;
-  }
-
-  &--toys {
-    right: 26px;
-    width: 60px;
-    height: 60px;
-  }
-}
-
-@media (min-width: $tablet-width) {
-
-  .catalog-buttons {
-    display: flex;
+.catalog-buttons__link
+{
     position: relative;
 
-   &::after {
+    display: block;
+    display: flex;
+
     box-sizing: border-box;
-    content: "";
-    position: absolute;
-    z-index: 1;
-    height: 34px;
-    left: 0;
-    right: 0;
-    bottom: -12px;
-    background-image: url(../img/bg-zigzag-fill.svg);
-    background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position: bottom center;
-   }
-  }
-
-  .catalog-buttons__item {
-    width: 50%;
-  }
-
-  .catalog-buttons__link {
-    @include osbold(20px, 30px, #ffffff);
-    min-height: 117px;
-    padding: 28px 35px;
+    min-height: 103px;
+    padding: 25px 30px;
     padding-right: 160px;
-  }
 
-  .catalog-buttons__icon {
-    &--interior {
-      right: 36px;
+    transition: .1s ease-in-out;
+    text-decoration: none;
+
+    @include osbold(19px, 24px, #fff);
+    align-items: center;
+
+    &:active
+    {
+        color: rgba(255, 255, 255, .3);
     }
-  
-    &--toys {
-      right: 33px;
+
+    &--interior
+    {
+        background-color: #63d1bb;
     }
-  }
+
+    &--toys
+    {
+        background-color: #56c3b2;
+    }
 }
 
-@media (min-width: $desktop-width) {
+.catalog-buttons__link
+{
+    &:hover .catalog-buttons__icon
+    {
+        fill: rgba(20, 144, 128, .7);
+    }
 
-  .catalog-buttons {
-   &::after {
-    bottom: -19px;
-    background-size: 100% 34px;
-   }
-  }
+    &:active .catalog-buttons__icon
+    {
+        fill: rgba(20, 144, 128, .3);
+    }
+}
 
-  .catalog-buttons__link {
-    @include osbold(20px, 30px, #ffffff);
-    padding-right: 350px;
-    width: 525px;
-  }
+.catalog-buttons__icon
+{
+    position: absolute;
+    top: 50%;
+
+    box-sizing: border-box;
+
+    transition: .1s ease-in-out;
+    transform: translateY(-50%);
+
+    fill: rgba(20, 144, 128, .5);
+    &--interior
+    {
+        right: 35px;
+
+        width: 40px;
+        height: 62px;
+    }
+
+    &--toys
+    {
+        right: 26px;
+
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (min-width: $tablet-width)
+{
+    .catalog-buttons
+    {
+        position: relative;
+
+        display: flex;
+
+        &::after
+        {
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            bottom: -12px;
+            left: 0;
+
+            box-sizing: border-box;
+            height: 34px;
+
+            content: '';
+
+            background-image: url(../img/bg-zigzag-fill.svg);
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: 100% auto;
+        }
+    }
+
+    .catalog-buttons__item
+    {
+        width: 50%;
+    }
+
+    .catalog-buttons__link
+    {
+        min-height: 117px;
+        padding: 28px 35px;
+        padding-right: 160px;
+
+        @include osbold(20px, 30px, #fff);
+    }
+
+    .catalog-buttons__icon
+    {
+        &--interior
+        {
+            right: 36px;
+        }
+
+        &--toys
+        {
+            right: 33px;
+        }
+    }
+}
+
+@media (min-width: $desktop-width)
+{
+    .catalog-buttons
+    {
+        &::after
+        {
+            bottom: -19px;
+
+            background-size: 100% 34px;
+        }
+    }
+
+    .catalog-buttons__link
+    {
+        width: 525px;
+        padding-right: 350px;
+
+        @include osbold(20px, 30px, #fff);
+    }
 }

@@ -1,82 +1,82 @@
-@font-face {
-  font-style: normal;
-  font-weight: normal;
-  font-family: "opensansregular";
+@font-face
+{
+    font-family: 'opensansregular';
+    font-weight: normal;
+    font-style: normal;
 
-  font-display: swap;
-
-  src: url("../fonts/opensansregular.woff2") format("woff2"),
-  url("../fonts/opensansregular.woff") format("woff");
+    font-display: swap;
+    src: url('../fonts/opensansregular.woff2') format('woff2'),
+    url('../fonts/opensansregular.woff') format('woff');
 }
 
-@font-face {
-  font-style: normal;
-  font-weight: normal;
-  font-family: "opensansbold";
+@font-face
+{
+    font-family: 'opensansbold';
+    font-weight: normal;
+    font-style: normal;
 
-  font-display: swap;
-
-  src: url("../fonts/opensansbold.woff2") format("woff2"),
-  url("../fonts/opensansbold.woff") format("woff");
+    font-display: swap;
+    src: url('../fonts/opensansbold.woff2') format('woff2'),
+    url('../fonts/opensansbold.woff') format('woff');
 }
 
 
-@import "toggler.scss";
+@import 'toggler.scss';
 
 
-@import "./variables.scss";
+@import './variables.scss';
 
-@import "./mixins.scss";
-
-
-@import "./blocks/visually-hidden.scss";
-
-@import "./blocks/container.scss";
-
-@import "./blocks/button.scss";
+@import './mixins.scss';
 
 
-@import "./blocks/page.scss";
+@import './blocks/visually-hidden.scss';
 
-@import "./blocks/menu.scss";
+@import './blocks/container.scss';
 
-@import "./blocks/options.scss";
-
-@import "./blocks/main-nav.scss";
+@import './blocks/button.scss';
 
 
-@import "./blocks/main-сontent.scss";
+@import './blocks/page.scss';
 
-@import "./blocks/catalog-buttons.scss";
+@import './blocks/menu.scss';
 
-@import "./blocks/promo.scss";
+@import './blocks/options.scss';
 
-@import "./blocks/promo-card.scss";
-
-@import "./blocks/features.scss";
-
-@import "./blocks/reviews.scss";
-
-@import "./blocks/contacts.scss";
-
-@import "./blocks/footer.scss";
-
-@import "./blocks/social-links.scss";
-
-@import "./blocks/modal.scss";
+@import './blocks/main-nav.scss';
 
 
-@import "./blocks/catalog-сontent.scss";
+@import './blocks/main-сontent.scss';
 
-@import "./blocks/catalog.scss";
+@import './blocks/catalog-buttons.scss';
 
-@import "./blocks/product-card.scss";
+@import './blocks/promo.scss';
 
-@import "./blocks/show.scss";
+@import './blocks/promo-card.scss';
 
-@import "./blocks/show-card.scss";
+@import './blocks/features.scss';
+
+@import './blocks/reviews.scss';
+
+@import './blocks/contacts.scss';
+
+@import './blocks/footer.scss';
+
+@import './blocks/social-links.scss';
+
+@import './blocks/modal.scss';
 
 
-@import "./blocks/form-сontent.scss";
+@import './blocks/catalog-сontent.scss';
 
-@import "./blocks/order-form.scss";
+@import './blocks/catalog.scss';
+
+@import './blocks/product-card.scss';
+
+@import './blocks/show.scss';
+
+@import './blocks/show-card.scss';
+
+
+@import './blocks/form-сontent.scss';
+
+@import './blocks/order-form.scss';

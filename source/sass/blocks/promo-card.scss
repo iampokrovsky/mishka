@@ -1,216 +1,280 @@
-.promo-card {
-  box-sizing: border-box;
-  padding: 27px 30px 36px;
+.promo-card
+{
+    box-sizing: border-box;
+    padding: 27px 30px 36px;
 }
 
-.promo-card__name-wrapper {
-  box-sizing: border-box;
-  margin-bottom: 24px;
+.promo-card__name-wrapper
+{
+    box-sizing: border-box;
+    margin-bottom: 24px;
 }
 
-.promo-card__name {
-  @include osbold(25px, 30px, #000000);
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 5px;
-}
-
-.promo-card__label {
-  @include osbold(17px, 20px, #63d1bb);
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-}
-
-.promo-card__description {
-  @include osregular(15px, 24px, #444444);
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 16px;
-}
-
-.promo-card__specifications {
-  box-sizing: border-box;
-  margin-bottom: 26px;
-  border-collapse: collapse;
-}
-
-.promo-card__specifications-row {
-  border-bottom: 1px solid #e7e7e7;
-}
-
-.promo-card__feature {
-  @include osregular(15px, 20px, #444444);
-  font-weight: normal;
-  padding: 10px 0;
-  padding-right: 28px;
-}
-
-.promo-card__value {
-  @include osregular(15px, 20px, #444444);
-  padding: 10px 0;
-}
-
-.promo-card__image-wrapper {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 24px;
-  background-color: #f1f1f1;
-}
-
-.promo-card__image {
-  @include responsive-image;
-  box-sizing: border-box;
-  width: 260px;
-  height: 315px;
-  margin: 0 auto;
-  display: block;
-}
-
-.promo-card__price {
-  @include osbold(17px, 24px, #444444);
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0;
-  text-align: center;
-  width: 260px;
-  margin-bottom: 26px;
-}
-
-.product-card__button {
-  width: 260px;
-  margin: 0 auto;
-}
-
-@media (min-width: $tablet-width) {
-  .promo-card {
-    padding: 46px 50px 53px;
-  }
-
-  .promo-card__name-wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-  }
-
-  .promo-card__name {
-    @include osbold(43px, 50px, #000000);
+.promo-card__name
+{
+    box-sizing: border-box;
     margin: 0;
-  }
+    margin-bottom: 5px;
+    padding: 0;
 
-  .promo-card__label {
-    @include osbold(17px, 17px, #63d1bb);
-    width: 80px;
-    text-align: center;
-    margin-top: 12px;
-    margin-right: 20px;
-  }
+    @include osbold(25px, 30px, #000);
+}
 
-  .promo-card__content-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 412px;
-    padding-right: 56.2874251497006%;
-    position: relative;
-  }
+.promo-card__label
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 
-  .promo-card__description {
-    @include osregular(17px, 30px, #444444);
-    margin-bottom: 34px;
-  }
+    text-transform: uppercase;
 
-  .promo-card__specifications {
-    margin-bottom: 54px;
-  }
+    @include osbold(17px, 20px, #63d1bb);
+}
 
-  .promo-card__feature {
+.promo-card__description
+{
+    box-sizing: border-box;
+    margin: 0;
+    margin-bottom: 16px;
+    padding: 0;
+
+    @include osregular(15px, 24px, #444);
+}
+
+.promo-card__specifications
+{
+    box-sizing: border-box;
+    margin-bottom: 26px;
+
+    border-collapse: collapse;
+}
+
+.promo-card__specifications-row
+{
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.promo-card__feature
+{
+    font-weight: normal;
+
+    padding: 10px 0;
     padding-right: 28px;
-  }
 
-  .promo-card__price {
-    @include osbold(20px, 24px, #444444);
-    margin: auto 0 35px;
-    width: 292px;
-  }
-
-  .product-card__button {
-    width: 292px;
-    margin: 0;
-    margin-right: auto;
-  }
-
-  .promo-card__image-wrapper {
-    position: absolute;
-    top: 8px;
-    left: 50%;
-    right: 0;
-    height: 404px;
-    margin: 0;
-  }
-
-  .promo-card__image {
-    margin: 0 auto;
-    width: 333px;
-    height: 404px;
-  }
+    @include osregular(15px, 20px, #444);
 }
 
-@media (min-width: $desktop-width) {
-  .promo-card {
-    padding: 126px 350px 73px 41px;
-    position: relative;
-  }
+.promo-card__value
+{
+    padding: 10px 0;
 
-  .promo-card__name-wrapper {
-    margin-bottom: 48px;
-  }
+    @include osregular(15px, 20px, #444);
+}
 
-  .promo-card__name {
-    @include osbold(53px, 57px, #000000);
-    order: 2;
-  }
+.promo-card__image-wrapper
+{
+    box-sizing: border-box;
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 0;
 
-  .promo-card__label {
-    margin-top: 14px;
-    margin-right: 0;
-    order: 1;
-  }
+    background-color: #f1f1f1;
+}
 
-  .promo-card__content-wrapper {
-    width: 292px;
-    margin-left: 133px;
-    margin-right: auto;
-    padding-right: 0;
-    position: static;
-  }
+.promo-card__image
+{
+    display: block;
 
-  .promo-card__description {
-    margin-bottom: 46px;
-  }
+    box-sizing: border-box;
+    width: 260px;
+    height: 315px;
+    margin: 0 auto;
 
-  .promo-card__specifications {
-    margin-bottom: 108px;
-  }
+    @include responsive-image;
+}
 
-  .promo-card__price {
-    margin-right: 58px;
-    margin-bottom: 35px;
-  }
+.promo-card__price
+{
+    box-sizing: border-box;
+    width: 260px;
+    margin: 0 auto;
+    margin-bottom: 26px;
+    padding: 0;
 
-  .promo-card__image-wrapper {
-    top: 73px;
-    right: 0;
-    width: 525px;
-    height: 636px;
-    z-index: -1;
-  }
+    text-align: center;
 
-  .promo-card__image {
-    width: 525px;
-    height: 636px;
-  }
+    @include osbold(17px, 24px, #444);
+}
+
+.product-card__order-button
+{
+    width: 260px;
+    margin: 0 auto;
+}
+
+@media (min-width: $tablet-width)
+{
+    .promo-card
+    {
+        padding: 46px 50px 53px;
+    }
+
+    .promo-card__name-wrapper
+    {
+        display: flex;
+
+        margin-bottom: 50px;
+
+        justify-content: space-between;
+    }
+
+    .promo-card__name
+    {
+        margin: 0;
+
+        @include osbold(43px, 50px, #000);
+    }
+
+    .promo-card__label
+    {
+        width: 80px;
+        margin-top: 12px;
+        margin-right: 20px;
+
+        text-align: center;
+
+        @include osbold(17px, 17px, #63d1bb);
+    }
+
+    .promo-card__content-wrapper
+    {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+
+        min-height: 412px;
+        padding-right: 56.2874251497006%;
+    }
+
+    .promo-card__description
+    {
+        margin-bottom: 34px;
+
+        @include osregular(17px, 30px, #444);
+    }
+
+    .promo-card__specifications
+    {
+        margin-bottom: 54px;
+    }
+
+    .promo-card__feature
+    {
+        padding-right: 28px;
+    }
+
+    .promo-card__price
+    {
+        width: 292px;
+        margin: auto 0 35px;
+
+        @include osbold(20px, 24px, #444);
+    }
+
+    .product-card__order-button
+    {
+        width: 292px;
+        margin: 0;
+        margin-right: auto;
+    }
+
+    .promo-card__image-wrapper
+    {
+        position: absolute;
+        top: 8px;
+        right: 0;
+        left: 50%;
+
+        height: 404px;
+        margin: 0;
+    }
+
+    .promo-card__image
+    {
+        width: 333px;
+        height: 404px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: $desktop-width)
+{
+    .promo-card
+    {
+        position: relative;
+
+        padding: 126px 350px 73px 41px;
+    }
+
+    .promo-card__name-wrapper
+    {
+        margin-bottom: 48px;
+    }
+
+    .promo-card__name
+    {
+        @include osbold(53px, 57px, #000);
+        order: 2;
+    }
+
+    .promo-card__label
+    {
+        margin-top: 14px;
+        margin-right: 0;
+
+        order: 1;
+    }
+
+    .promo-card__content-wrapper
+    {
+        position: static;
+
+        width: 292px;
+        margin-right: auto;
+        margin-left: 133px;
+        padding-right: 0;
+    }
+
+    .promo-card__description
+    {
+        margin-bottom: 46px;
+    }
+
+    .promo-card__specifications
+    {
+        margin-bottom: 108px;
+    }
+
+    .promo-card__price
+    {
+        margin-right: 58px;
+        margin-bottom: 35px;
+    }
+
+    .promo-card__image-wrapper
+    {
+        z-index: -1;
+        top: 73px;
+        right: 0;
+
+        width: 525px;
+        height: 636px;
+    }
+
+    .promo-card__image
+    {
+        width: 525px;
+        height: 636px;
+    }
 }

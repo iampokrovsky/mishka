@@ -1,163 +1,264 @@
-.main-nav {
-  box-sizing: border-box;
-}
-
-.main-nav__top-wrapper {
-  box-sizing: border-box;
-  height: 80px;
-  border-bottom: 1px solid #e7e7e7;
-  position: relative;
-}
-
-.main-nav__logo-link {
-  box-sizing: border-box;
-  position: absolute;
-
-  top: 22px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.main-nav__logo-image {
-  @include responsive-image;
-  box-sizing: border-box;
-  width: 86px;
-  height: 35px;
-  transition: 0.1s ease-in-out;
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-}
-
-.main-nav__button {
-  box-sizing: border-box;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  background: none;
-  border: none;
-  position: absolute;
-  top: 50%;
-  right: 30px;
-  transform: translateY(-50%);
-  background-position: center;
-  background-repeat: no-repeat;
-
-  &--open {
-    background-image: url("../../img/icon-menu-open.svg");
-    display: none;
-  }
-
-  &--close {
-    background-image: url("../../img/icon-menu-close.svg");
-  }
-}
-
-.main-nav__delivery {
-  display: none;
-}
-
-@media (min-width: $tablet-width) {
-  .main-nav {
-    height: 89px;
-    position: relative;
-    border-bottom: 1px solid #e7e7e7;
-    padding: 0 50px;
-  }
-
-  .main-nav__content {
+.main-nav
+{
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-  }
+}
 
-  .main-nav__top-wrapper {
-    display: block;
+.main-nav__top-wrapper
+{
+    position: relative;
+
+    box-sizing: border-box;
+    height: 80px;
+
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.main-nav__logo-link
+{
     position: absolute;
     top: 22px;
-    left: 50px;
-    border: none;
-  }
+    left: 50%;
 
-  .main-nav__logo-link {
-    position: static;
-    transform: none;
-  }
-
-  .main-nav__logo-image {
-    width: 112px;
-    height: 46px;
-  }
-
-  .main-nav__button {
-    display: none;
-  }
-
-  .main-nav__menu {
-    flex-shrink: 0;
-    margin-top: 106px;
-  }
-
-  .main-nav__toolbar {
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-  }
 
-  .main-nav__options {
-    display: flex;
-    margin-bottom: 18px;
-  }
-
-  .main-nav__options-link {
-    height: 90px;
-    padding: 30px 0;
-    &--search {
-      width: 84px;
-      background-color: #d3d2d2;
-      border-left: 1px solid #e7e7e7;
-      border-right: 1px solid #e7e7e7;
-    }
-    &--cart {
-      padding-left: 82px;
-    }
-  }
-
-  .main-nav__options-text {
-    @include visually-hidden;
-  }
-
-  .main-nav__delivery {
-    @include osregular(15px, 24px, #444444);
-    box-sizing: border-box;
-    display: block;
-    align-self: flex-end;
-  }
+    transform: translateX(-50%);
 }
 
-@media (min-width: $desktop-width) {
-  .main-nav__top-wrapper {
-    top: 9px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
+.main-nav__logo-image
+{
+    box-sizing: border-box;
+    width: 86px;
+    height: 35px;
 
-  .main-nav__logo-image {
-    width: 149px;
-    height: 72px;
-  }
+    transition: .1s ease-in-out;
 
-  .main-nav__menu {
-    margin: 0;
-  }
+    @include responsive-image;
 
-  .main-nav__options {
-    margin-bottom: 18px;
-  }
+    &:hover
+    {
+        opacity: .6;
+    }
+
+    &:active
+    {
+        opacity: .3;
+    }
+}
+
+.main-nav__button
+{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+
+    transform: translateY(-50%);
+
+    border: none;
+    background: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    &--open
+    {
+        background-image: url('../../img/icon-menu-open.svg');
+    }
+
+    &--close
+    {
+        background-image: url('../../img/icon-menu-close.svg');
+    }
+
+    &--no-js
+    {
+        display: none;
+    }
+}
+
+.main-nav__content
+{
+    overflow: hidden;
+
+    box-sizing: border-box;
+
+    transition: .1s ease-in-out;
+    &--closed
+    {
+        height: 0;
+    }
+    &--open
+    {
+        height: 316px;
+    }
+    &--no-js
+    {
+        height: auto;
+    }
+}
+
+.main-nav__delivery
+{
+    display: none;
+}
+
+@media (min-width: $tablet-width)
+{
+    .main-nav
+    {
+        position: relative;
+
+        height: 89px;
+        padding: 0 50px;
+
+        border-bottom: 1px solid #e7e7e7;
+    }
+
+    .main-nav__content
+    {
+        display: flex;
+        overflow: visible;
+
+        justify-content: space-between;
+        &--closed
+        {
+            height: auto;
+        }
+        &--open
+        {
+            height: auto;
+        }
+    }
+
+    .main-nav__content
+    {
+        transition: .1s ease-in-out;
+        &--closed
+        {
+            height: 0;
+        }
+        &--open
+        {
+            height: 316px;
+        }
+        &--no-js
+        {
+            height: auto;
+        }
+    }
+
+    .main-nav__top-wrapper
+    {
+        position: absolute;
+        top: 22px;
+        left: 50px;
+
+        display: block;
+
+        border: none;
+    }
+
+    .main-nav__logo-link
+    {
+        position: static;
+
+        transform: none;
+    }
+
+    .main-nav__logo-image
+    {
+        width: 112px;
+        height: 46px;
+    }
+
+    .main-nav__button
+    {
+        display: none;
+    }
+
+    .main-nav__menu
+    {
+        margin-top: 106px;
+
+        flex-shrink: 0;
+    }
+
+    .main-nav__toolbar
+    {
+        display: flex;
+        flex-direction: column;
+
+        box-sizing: border-box;
+
+        flex-shrink: 0;
+    }
+
+    .main-nav__options
+    {
+        display: flex;
+
+        margin-bottom: 18px;
+    }
+
+    .main-nav__options-link
+    {
+        height: 90px;
+        padding: 30px 0;
+        &--search
+        {
+            width: 84px;
+
+            border-right: 1px solid #e7e7e7;
+            border-left: 1px solid #e7e7e7;
+            background-color: #d3d2d2;
+        }
+        &--cart
+        {
+            padding-left: 82px;
+        }
+    }
+
+    .main-nav__options-text
+    {
+        @include visually-hidden;
+    }
+
+    .main-nav__delivery
+    {
+        display: block;
+
+        box-sizing: border-box;
+
+        align-self: flex-end;
+        @include osregular(15px, 24px, #444);
+    }
+}
+
+@media (min-width: $desktop-width)
+{
+    .main-nav__top-wrapper
+    {
+        top: 9px;
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+
+    .main-nav__logo-image
+    {
+        width: 149px;
+        height: 72px;
+    }
+
+    .main-nav__menu
+    {
+        margin: 0;
+    }
+
+    .main-nav__options
+    {
+        margin-bottom: 18px;
+    }
 }

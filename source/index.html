@@ -34,14 +34,14 @@
             <source media="(min-width: 1150px)" srcset="./img/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="./img/logo-tablet.svg">
             <img class="main-nav__logo-image" src="./img/logo-mobile.svg"
-                 alt="Мишка - интернет-магазин вязаных изделий для дома">
+              alt="Мишка - интернет-магазин вязаных изделий для дома">
           </picture>
         </a>
-        <button class="main-nav__button main-nav__button--close" type="button">
+        <button class="main-nav__button main-nav__button--no-js main-nav__button--open" type="button">
           <span class="visually-hidden">Открыть/закрыть меню</span>
         </button>
       </div>
-      <div class="main-nav__content">
+      <div class="main-nav__content main-nav__content--no-js main-nav__content--closed">
         <ul class="main-nav__menu menu">
           <li class="menu__item menu__item--catalog">
             <a class="menu__link menu__link--catalog" href="./catalog.html">Каталог товаров</a>
@@ -61,7 +61,7 @@
             <li class="options__item">
               <a class="options__link options__link--search" href="">
                 <svg class="options__icon options__icon--search" aria-hidden="true" role="presentation" width="18"
-                     height="18">
+                  height="18">
                   <use xlink:href="#icon-search"></use>
                 </svg>
                 <span class="options__text">Поиск по сайту</span>
@@ -70,7 +70,7 @@
             <li class="options__item">
               <a class="options__link options__link--cart" href="">
                 <svg class="options__icon options__icon--cart" aria-hidden="true" role="presentation" width="21"
-                     height="18">
+                  height="18">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
                 Корзина: пока пуста</a>
@@ -91,7 +91,7 @@
         <li class="catalog-buttons__item">
           <a class="catalog-buttons__link catalog-buttons__link--interior" href="">Предметы интерьера
             <svg class="catalog-buttons__icon catalog-buttons__icon--interior" aria-hidden="true" role="presentation"
-                 width="40" height="62">
+              width="40" height="62">
               <use xlink:href="#icon-interior"></use>
             </svg>
           </a>
@@ -99,7 +99,7 @@
         <li class="catalog-buttons__item">
           <a class="catalog-buttons__link catalog-buttons__link--toys" href="">Детские игрушки
             <svg class="catalog-buttons__icon catalog-buttons__icon--toys" aria-hidden="true" role="presentation"
-                 width="60" height="60">
+              width="60" height="60">
               <use xlink:href="#icon-toy"></use>
             </svg>
           </a>
@@ -135,20 +135,20 @@
             <p class="promo-card__image-wrapper">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)"
-                        srcset="./img/triple-set-desktop@2x.webp 2x, ./img/triple-set-desktop@1x.webp 1x">
+                  srcset="./img/triple-set-desktop@2x.webp 2x, ./img/triple-set-desktop@1x.webp 1x">
                 <source media="(min-width: 1150px)"
-                        srcset="./img/triple-set-desktop@2x.jpg 2x, ./img/triple-set-desktop@1x.jpg">
+                  srcset="./img/triple-set-desktop@2x.jpg 2x, ./img/triple-set-desktop@1x.jpg">
                 <source type="image/webp" media="(min-width: 768px)"
-                        srcset="./img/triple-set-tablet@2x.webp 2x, ./img/triple-set-tablet@1x.webp 1x">
+                  srcset="./img/triple-set-tablet@2x.webp 2x, ./img/triple-set-tablet@1x.webp 1x">
                 <source media="(min-width: 768px)"
-                        srcset="./img/triple-set-tablet@2x.jpg 2x, ./img/triple-set-tablet@1x.jpg">
+                  srcset="./img/triple-set-tablet@2x.jpg 2x, ./img/triple-set-tablet@1x.jpg">
                 <source type="image/webp" srcset="./img/triple-set-mobile@2x.webp 2x, ./img/triple-set-mobile@1x.webp">
                 <img class="promo-card__image" src="./img/triple-set-mobile@1x.jpg"
-                     srcset="./img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+                  srcset="./img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
               </picture>
             </p>
             <p class="promo-card__price">Цена: 990 руб.</p>
-            <button class="product-card__button button button--border" type="button">Заказать</button>
+            <a class="promo-card__order-button button button--border button--order" href="./form.html">Заказать</a>
           </div>
         </li>
       </ul>
@@ -160,21 +160,21 @@
         <ul class="features__list-left">
           <li class="features__item features__item--eco">
             <svg class="features__item-icon features__item-icon--eco" aria-hidden="true" role="presentation" width="32"
-                 height="37">
+              height="37">
               <use xlink:href="#icon-feature-flower"></use>
             </svg>
             Экологически чистые материалы
           </li>
           <li class="features__item features__item--style">
             <svg class="features__item-icon features__item-icon--style" aria-hidden="true" role="presentation"
-                 width="47" height="27">
+              width="47" height="27">
               <use xlink:href="#icon-feature-money"></use>
             </svg>
             Скандинавский стиль по российской цене
           </li>
           <li class="features__item features__item--likes">
             <svg class="features__item-icon features__item-icon--likes" aria-hidden="true" role="presentation"
-                 width="34" height="27">
+              width="34" height="27">
               <use xlink:href="#icon-feature-heart"></use>
             </svg>
             Увеличивает лайки на фотографиях
@@ -183,21 +183,21 @@
         <ul class="features__list-right">
           <li class="features__item features__item--love">
             <svg class="features__item-icon features__item-icon--love" aria-hidden="true" role="presentation" width="35"
-                 height="34">
+              height="34">
               <use xlink:href="#icon-feature-ball"></use>
             </svg>
             Связано вручную с любовью и умилением
           </li>
           <li class="features__item features__item--support">
             <svg class="features__item-icon features__item-icon--support" aria-hidden="true" role="presentation"
-                 width="55" height="23">
+              width="55" height="23">
               <use xlink:href="#icon-feature-rocket"></use>
             </svg>
             Поддержка отечественного производителя
           </li>
           <li class="features__item features__item--gift">
             <svg class="features__item-icon features__item-icon--gift" aria-hidden="true" role="presentation" width="33"
-                 height="32">
+              height="32">
               <use xlink:href="#icon-feature-gift"></use>
             </svg>
             Поставляется в подарочной упаковке
@@ -257,14 +257,14 @@
         <a class="contacts__map-link" href="">
           <picture>
             <source type="image/webp" media="(min-width: 1150px)"
-                    srcset="./img/map-desktop@2x.webp 2x, ./img/map-desktop@1x.webp">
+              srcset="./img/map-desktop@2x.webp 2x, ./img/map-desktop@1x.webp">
             <source media="(min-width: 1150px)" srcset="./img/map-desktop@2x.jpg 2x, ./img/map-desktop@1x.jpg">
             <source type="image/webp" media="(min-width: 768px)"
-                    srcset="./img/map-tablet@2x.webp 2x, ./img/map-tablet@1x.webp">
+              srcset="./img/map-tablet@2x.webp 2x, ./img/map-tablet@1x.webp">
             <source media="(min-width: 768px)" srcset="./img/map-tablet@2x.jpg 2x, ./img/map-tablet@1x.jpg">
             <source type="image/webp" srcset="./img/map-mobile@2x.webp 2x, ./img/map-mobile@1x.webp">
             <img class="contacts__map-image" src="./img/map-mobile@1x.jpg" srcset="./img/map-mobile@2x.jpg 2x"
-                 alt="Мы находимся по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+              alt="Мы находимся по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
           </picture>
         </a>
       </p>
@@ -284,7 +284,7 @@
     <ul class="footer__social-links social-links">
       <li class="social-links__item">
         <a class="social-links__link social-links__link--instagram" href=""
-           aria-label="Переход на страницу в Instagram">
+          aria-label="Переход на страницу в Instagram">
           <svg class="social-links__link-icon social-links__link-icon--instagram" role="img" width="22" height="21">
             <use xlink:href="#icon-insta"></use>
           </svg>
@@ -343,6 +343,7 @@
 
   <div class="page__overlay"></div>
 
+  <script src="./js/script.js"></script>
 </body>
 
 </html>

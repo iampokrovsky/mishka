@@ -1,27 +1,35 @@
-.promo {
-  box-sizing: border-box;
-  padding-bottom: 6px;
-  background-image: url("../../img/bg-zigzag-line.svg");
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+.promo
+{
+    box-sizing: border-box;
+    padding-bottom: 6px;
+
+    background-image: url('../../img/bg-zigzag-line.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: 100% auto;
 }
 
-.promo__list {
-  box-sizing: border-box;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.promo__list
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
 }
 
-@media (min-width: $tablet-width) {
-  .promo {
-    padding-bottom: 15px;
-  }
+@media (min-width: $tablet-width)
+{
+    .promo
+    {
+        padding-bottom: 15px;
+    }
 }
 
-@media (min-width: $desktop-width) {
-  .promo {
-    padding-bottom: 23px;
-  }
+@media (min-width: $desktop-width)
+{
+    .promo
+    {
+        padding-bottom: 23px;
+    }
 }
