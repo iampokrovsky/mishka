@@ -88,6 +88,7 @@
 .contacts__map-wrapper {
   display: block;
   box-sizing: border-box;
+  height: 457px;
   margin: 0;
   margin-bottom: 39px;
   padding: 0;
@@ -96,10 +97,24 @@
 }
 
 .contacts__map-link {
+  position: relative;
+
   display: block;
   box-sizing: border-box;
   width: 322px;
   margin: 0 auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 145px;
+    left: 138px;
+
+    width: 66px;
+    height: 100px;
+
+    background: url(../img/icon-map-pin.svg) no-repeat 0 0;
+  }
 }
 
 .contacts__map-image {
@@ -158,6 +173,11 @@
 
   .contacts__map-link {
     width: 768px;
+
+    &::before {
+      top: 138px;
+      left: 364px;
+    }
   }
 
   .contacts__map-image {
@@ -210,6 +230,11 @@
 
   .contacts__map-link {
     width: auto;
+
+    &::before {
+      top: 146px;
+      left: 238px;
+    }
   }
 
   .contacts__map-image {

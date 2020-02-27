@@ -1,6 +1,6 @@
 var gulp = require("gulp");
 var plumber = require("gulp-plumber");
-var sourcemap = require("gulp-sourcemaps");
+var sourcemaps = require("gulp-sourcemaps");
 var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
@@ -17,13 +17,18 @@ var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
 var cheerio = require("gulp-cheerio");
 var csscomb = require("gulp-csscomb");
+var concat = require("gulp-concat");
 
 gulp.task("buildClean", function () {
   return del(["./build/**", "!./build/img"]);
 });
 
 gulp.task("html", function () {
-  return gulp.src("./source/*.html")
+  return gulp.src([
+    "./source/*.html"
+  ], {
+    base: "source"
+  })
     .pipe(posthtml([
       include()
     ]))
@@ -35,18 +40,26 @@ gulp.task("html", function () {
 });
 
 gulp.task("css", function () {
-  return gulp.src("./source/sass/style.scss")
+  return gulp.src([
+    "./source/libs/*/build/*.css",
+    "./source/sass/*.scss",
+    "./source/sass/blocks/**/*.scss"
+  ])
     .pipe(plumber())
-    .pipe(sourcemap.init())
+    .pipe(sourcemaps.init())
+    .pipe(rename(function (path) {
+      path.extname = ".scss";
+    }))
+    .pipe(concat("style.css"))
     .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
     .pipe(csscomb())
-    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("./build/css"))
     .pipe(minify())
-    .pipe(rename("./style.min.css"))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./build/css"))
     .pipe(server.stream());
 });
@@ -64,20 +77,25 @@ gulp.task("copy", function () {
   return gulp.src([
     "./source/img/**/*.webmanifest",
     "./source/fonts/**/*.{woff,woff2}",
-    // "./source/js/**/*.js"
   ], {
     base: "source"
   })
     .pipe(gulp.dest("./build"));
 });
 
-gulp.task("scripts", function () {
-  return gulp.src("./source/js/**/*.js")
-    .pipe(gulp.dest("./build/js"))
+gulp.task('scripts', function () {
+  return gulp.src([
+    "./source/libs/*/build/*.js",
+    "./source/js/**/*.js",
+  ])
     .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest("./build/js"))
     .pipe(uglify())
     .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest("./build/js"));
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest("./build/js"))
 });
 
 gulp.task("server", function () {
@@ -92,7 +110,7 @@ gulp.task("server", function () {
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/*.html").on("change", gulp.series("html", server.reload));
-  gulp.watch("source/**/*.js").on("change", gulp.series("scripts", server.reload));
+  gulp.watch("source/js/**/*.js").on("change", gulp.series("scripts", server.reload));
   // gulp.watch("source/*.html").on("change", server.reload);
 });
 
@@ -165,7 +183,6 @@ gulp.task("build",
       "copy",
       "scripts"
     ),
-    "stylecomb"
   )
 );
 
