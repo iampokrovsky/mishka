@@ -99,7 +99,7 @@
 .contacts__map-link {
   position: relative;
 
-  display: block;
+  display: none;
   box-sizing: border-box;
   width: 322px;
   margin: 0 auto;
@@ -114,6 +114,9 @@
     height: 100px;
 
     background: url(../img/icon-map-pin.svg) no-repeat 0 0;
+  }
+  &--no-js {
+    display: block;
   }
 }
 

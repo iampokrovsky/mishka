@@ -56,7 +56,6 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(csscomb())
-    .pipe(gulp.dest("./build/css"))
     .pipe(minify())
     .pipe(rename({ suffix: ".min" }))
     .pipe(sourcemaps.write("."))
@@ -178,10 +177,10 @@ gulp.task("build",
     "buildClean",
     gulp.parallel(
       "html",
-      "outline",
       "css",
       "copy",
-      "scripts"
+      "scripts",
+      "outline",
     ),
   )
 );

@@ -5267,40 +5267,33 @@
 }));
 //# sourceMappingURL=swiper.js.map
 
-// MAP
-var map;
+mapfallback = document.querySelector(".contacts__map-link");
 
-// function initMap() {
-//   var coordinates = { lat: 47.212325, lng: 38.933663 },
+document.addEventListener("DOMContentLoaded", function () {
+  if (mapfallback.classList.contains("contacts__map-link--no-js")) {
+    mapfallback.classList.remove("contacts__map-link--no-js");
+  }
+});
 
-//     map = new google.maps.Map(document.getElementById("map"), {
-//       center: coordinates
-//     });
-// }
-
-function initMap() {
-
-  // В переменной map создаем объект карты GoogleMaps и вешаем эту переменную на <div id="map"></div>
-  map = new google.maps.Map(document.getElementById('map'), {
-    // При создании объекта карты необходимо указать его свойства
-    // center - определяем точку на которой карта будет центрироваться
-    center: { lat: -34.397, lng: 150.644 },
-    // zoom - определяет масштаб. 0 - видно всю платнеу. 18 - видно дома и улицы города.
-    zoom: 8
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+    center: [59.938635, 30.323118],
+    zoom: 16,
+    controls: ['smallMapDefaultSet'],
   });
 
-  var marker = new google.maps.Marker({
-
-    // Определяем позицию маркера
-    position: { lat: 55.760186, lng: 37.618711 },
-
-    // Указываем на какой карте он должен появится. (На странице ведь может быть больше одной карты)
-    map: map,
-
-    // Пишем название маркера - появится если навести на него курсор и немного подождать
-    title: 'Наш маркер: Большой театр'
+  myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+    hintContent: 'г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101',
+  }, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/icon-map-pin.svg',
+    iconImageSize: [66, 100],
+    iconImageOffset: [-35, -110]
   });
-}
+
+  myMap.geoObjects
+    .add(myPlacemark);
+});
 var navButton = document.querySelector(".main-nav__button");
 var nav = document.querySelector(".main-nav__content");
 

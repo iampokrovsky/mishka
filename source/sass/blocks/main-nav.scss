@@ -182,6 +182,7 @@
     display: block;
     align-self: flex-end;
     box-sizing: border-box;
+    margin-top: 18px;
 
     @include osregular(15px, 24px, #444444);
   }

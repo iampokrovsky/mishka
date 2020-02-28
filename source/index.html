@@ -14,10 +14,7 @@
   <link rel="manifest" href="./img/favicons/site.webmanifest">
   <meta name="theme-color" content="#63d1bb">
 
-  <!-- <link
-    rel="stylesheet"
-    href="./css/outline.css"
-  > -->
+  <!-- <link rel="stylesheet" href="./css/outline.css"> -->
 </head>
 
 <body class="page__body">
@@ -227,7 +224,8 @@
             <li class="reviews__item swiper-slide">
               <blockquote class="reviews__content">
                 <p class="reviews__text">
-                  Незабываемый экспириенс! Таких потрясающих вязаных изделий нигде больше не найти, единственное место в Петербурге!
+                  Незабываемый экспириенс! Таких потрясающих вязаных изделий нигде больше не найти, единственное место в
+                  Петербурге!
                 </p>
                 <cite class="reviews__author-name">Маша Татаринцева</cite>
                 <address class="reviews__author-link">@tatarintseva</address>
@@ -236,7 +234,8 @@
             <li class="reviews__item swiper-slide">
               <blockquote class="reviews__content">
                 <p class="reviews__text">
-                  Когда мы шли к Шалашу Ленина, я сильно замёрз и пришлось надеть вязаные корзинки на руки. Удивительно, но несмотря на то, что они неплотно прилеглали к руквам, мне было очень тепло!
+                  Когда мы шли к Шалашу Ленина, я сильно замёрз и пришлось надеть вязаные корзинки на руки. Удивительно,
+                  но несмотря на то, что они неплотно прилеглали к руквам, мне было очень тепло!
                   Производители просто герои социалистического труда!
                 </p>
                 <cite class="reviews__author-name">Илья Ленин</cite>
@@ -275,8 +274,8 @@
           </tr>
         </table>
       </div>
-      <p class="contacts__map-wrapper">
-        <a class="contacts__map-link" href="">
+      <p class="contacts__map-wrapper" id="map">
+        <a class="contacts__map-link contacts__map-link--no-js" href="">
           <picture>
             <source type="image/webp" media="(min-width: 1150px)"
               srcset="./img/map-desktop@2x.webp 2x, ./img/map-desktop@1x.webp">
@@ -365,6 +364,9 @@
 
   <div class="page__overlay"></div>
 
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=3e09d7b2-92cd-4bfa-a06d-832f2e6f0f4b&lang=ru_RU"
+    type="text/javascript">
+    </script>
   <script src="./js/script.min.js" type="text/javascript"></script>
 </body>
 

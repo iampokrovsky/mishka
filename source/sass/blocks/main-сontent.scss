@@ -5,8 +5,9 @@
 .main-сontent__header {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   box-sizing: border-box;
-  min-height: 488px;
+  // min-height: 488px;
 
   background-image: url("../../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -22,9 +23,7 @@
   display: block;
   box-sizing: border-box;
   width: 260px;
-  margin: 0 auto;
-  margin-top: 70px;
-
+  margin: 70px auto 122px;
   text-align: center;
 
   @include osbold(27px, 30px, #000000);
