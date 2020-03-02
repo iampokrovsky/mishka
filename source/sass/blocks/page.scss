@@ -1,7 +1,3 @@
-.page {
-  box-sizing: border-box;
-}
-
 .page__body {
   box-sizing: border-box;
   margin: 0;
@@ -16,20 +12,15 @@
   left: 0;
   z-index: 0;
 
-  display: none;
   width: 100%;
   height: 100%;
 
   background-color: #ffffff;
   opacity: 0.9;
-
+  &--closed {
+    display: none;
+  }
   &--open {
     display: block;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .page__header {
-    padding: 0;
   }
 }

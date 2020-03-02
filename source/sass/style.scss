@@ -19,9 +19,10 @@
 }
 
 
-@import "toggler.scss";
+@import "./toggler.scss";
 @import "./variables.scss";
 @import "./mixins.scss";
+@import "./animations.scss";
 @import "./blocks/visually-hidden.scss";
 @import "./blocks/container.scss";
 @import "./blocks/button.scss";

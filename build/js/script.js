@@ -1,40 +1,38 @@
 var navButton = document.querySelector(".main-nav__button");
-var nav = document.querySelector(".main-nav__content");
-var orderButtons = document.querySelectorAll(".button--order");
-var modal = document.querySelector(".modal");
-var overlay = document.querySelector(".page__overlay");
-var modalFormInputS = document.querySelector(".modal__form-input--s");
+var navContent = document.querySelector(".main-nav__content");
 
-document.addEventListener('DOMContentLoaded', function () {
-  if (navButton.classList.contains("main-nav__button--no-js") && nav.classList.contains("main-nav__content--no-js")) {
-    navButton.classList.remove("main-nav__button--no-js");
-    nav.classList.remove("main-nav__content--no-js");
+document.addEventListener("DOMContentLoaded", function () {
+  if (navButton.classList.contains("main-nav__button--hidden") && !navContent.classList.contains("main-nav__content--closed")) {
+    navButton.classList.remove("main-nav__button--hidden");
+    navContent.classList.add("main-nav__content--closed");
   }
 });
 
 navButton.onclick = function (evt) {
   evt.preventDefault();
 
-  if (!navButton.classList.contains("main-nav__button--close") && !nav.classList.contains("main-nav__button--open")) {
+  if (!navButton.classList.contains("main-nav__button--close") && !navContent.classList.contains("main-nav__content--open")) {
     navButton.classList.add("main-nav__button--close");
-    nav.classList.add("main-nav__content--open");
+    navContent.classList.add("main-nav__content--open");
   } else {
     navButton.classList.remove("main-nav__button--close");
-    nav.classList.remove("main-nav__content--open");
+    navContent.classList.remove("main-nav__content--open");
   }
 };
+var orderButton = document.querySelector(".button--order");
+var modal = document.querySelector(".modal");
+var overlay = document.querySelector(".page__overlay");
+var modalFormInputS = document.querySelector(".modal__form-input--s");
 
-orderButtons.forEach(function (button) {
-  button.onclick = function (evt) {
-    evt.preventDefault();
+orderButton.onclick = function (evt) {
+  evt.preventDefault();
 
-    if (!modal.classList.contains("modal--open") && !overlay.classList.contains("page__overlay--open")) {
-      modal.classList.add("modal--open");
-      overlay.classList.add("page__overlay--open");
-      modalFormInputS.focus();
-    }
+  if (!modal.classList.contains("modal--open") && !overlay.classList.contains("page__overlay--open")) {
+    modal.classList.add("modal--open");
+    overlay.classList.add("page__overlay--open");
+    modalFormInputS.focus();
   }
-});
+}
 
 overlay.onclick = function (evt) {
   if (modal.classList.contains("modal--open") && overlay.classList.contains("page__overlay--open")) {

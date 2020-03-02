@@ -17,6 +17,7 @@ var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
 var cheerio = require("gulp-cheerio");
 var csscomb = require("gulp-csscomb");
+var concat = require("gulp-concat");
 
 gulp.task("buildClean", function () {
   return del(["./build/**", "!./build/img"]);
@@ -43,10 +44,10 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(csscomb())
-    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("./build/css"))
     .pipe(minify())
     .pipe(rename("./style.min.css"))
+    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("./build/css"))
     .pipe(server.stream());
 });
@@ -73,11 +74,14 @@ gulp.task("copy", function () {
 
 gulp.task("scripts", function () {
   return gulp.src("./source/js/**/*.js")
-    .pipe(gulp.dest("./build/js"))
     .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(concat('script.js'))
+    .pipe(gulp.dest("./build/js"))
     .pipe(uglify())
     .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest("./build/js"));
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("./build/js"))
 });
 
 gulp.task("server", function () {
@@ -92,7 +96,7 @@ gulp.task("server", function () {
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/*.html").on("change", gulp.series("html", server.reload));
-  gulp.watch("source/**/*.js").on("change", gulp.series("scripts", server.reload));
+  gulp.watch("source/js/**/*.js").on("change", gulp.series("scripts", server.reload));
   // gulp.watch("source/*.html").on("change", server.reload);
 });
 

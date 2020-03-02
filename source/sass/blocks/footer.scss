@@ -1,4 +1,4 @@
-.footer {
+.footer__container {
   position: relative;
 
   box-sizing: border-box;
@@ -76,12 +76,12 @@
 }
 
 @media (min-width: $tablet-width) {
-  .footer {
+  .footer__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 143px;
-    padding: 30px 50px;
+    // min-height: 143px;
+    padding: 54px 50px;
 
     &::before {
       display: none;
@@ -92,6 +92,7 @@
     display: flex;
     box-sizing: border-box;
     width: 200px;
+    height: 38px;
   }
 
   .footer__logo-image {

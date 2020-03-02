@@ -22,12 +22,16 @@
   display: block;
   box-sizing: border-box;
   width: 260px;
-  margin: 0 auto;
-  margin-top: 70px;
+  margin: 70px auto 122px;
 
   text-align: center;
 
   @include osbold(27px, 30px, #000000);
+}
+
+.main-сontent__catalog-buttons {
+  box-sizing: border-box;
+  margin-top: auto;
 }
 
 @media (min-width: $tablet-width) {
@@ -46,14 +50,15 @@
 
   .main-сontent__slogan {
     width: 520px;
-    margin-top: 154px;
+    margin: 154px auto 372px;
 
     @include osbold(43px, 50px, #000000);
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main-сontent {
+  .main-сontent__container {
+    box-sizing: border-box;
     padding: 0 50px;
   }
 
@@ -71,6 +76,7 @@
 
   .main-сontent__slogan {
     width: 620px;
+    margin: 154px auto 358px;
 
     @include osbold(53px, 57px, #000000);
   }
