@@ -280,8 +280,8 @@
             </tr>
           </table>
         </div>
-        <p class="contacts__map-wrapper">
-          <a class="contacts__map-link" href="">
+        <p class="contacts__map" id="map">
+          <a class="contacts__map-fallback-link" href="https://yandex.ru/maps/-/CKa0IIPp">
             <picture>
               <source type="image/webp" media="(min-width: 1150px)"
                 srcset="./img/map-desktop@2x.webp 2x, ./img/map-desktop@1x.webp">
@@ -290,7 +290,8 @@
                 srcset="./img/map-tablet@2x.webp 2x, ./img/map-tablet@1x.webp">
               <source media="(min-width: 768px)" srcset="./img/map-tablet@2x.jpg 2x, ./img/map-tablet@1x.jpg">
               <source type="image/webp" srcset="./img/map-mobile@2x.webp 2x, ./img/map-mobile@1x.webp">
-              <img class="contacts__map-image" src="./img/map-mobile@1x.jpg" srcset="./img/map-mobile@2x.jpg 2x"
+              <img class="contacts__map-fallback-image" src="./img/map-mobile@1x.jpg"
+                srcset="./img/map-mobile@2x.jpg 2x"
                 alt="Мы находимся по адресу: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
             </picture>
           </a>
@@ -374,6 +375,7 @@
 
   <div class="page__overlay page__overlay--closed"></div>
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="./js/script.min.js"></script>
 </body>
 
