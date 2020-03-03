@@ -9,6 +9,8 @@
   margin-bottom: 30px;
   padding: 0;
 
+  word-wrap: break-word;
+
   @include osbold(25px, 30px, #000000);
 }
 
@@ -34,6 +36,8 @@
   box-sizing: border-box;
   min-height: 123px;
   padding: 55px 0 20px;
+
+  word-wrap: break-word;
 
   background-repeat: no-repeat;
 
@@ -114,7 +118,12 @@
   }
 
   .features__list-left {
+    width: 45.63323353293413%;
     margin-right: 7.48502994011976%;
+  }
+
+  .features__list-right {
+    width: 46.88173652694611%;
   }
 
   .features__item {

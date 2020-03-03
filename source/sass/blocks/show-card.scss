@@ -21,6 +21,8 @@
   padding: 24px;
   padding-left: 88px;
 
+  word-wrap: break-word;
+
   background-image: url("../img/icon-video.svg");
   background-repeat: no-repeat;
   background-position: 33px 30px;
@@ -87,6 +89,8 @@
   margin: 0;
   margin-bottom: 25px;
   padding: 0;
+
+  word-wrap: break-word;
 
   @include osregular(13px, 24px, #444444);
 }
@@ -159,7 +163,7 @@
 
   .show-card__heading {
     margin-bottom: 33px;
-    padding: 49px 90px 0 0;
+    padding: 49px 80px 0 0;
 
     background-position: 1px -5px;
   }

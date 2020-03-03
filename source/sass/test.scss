@@ -53,20 +53,16 @@
 }
 
 .promo-card__feature {
-  box-sizing: border-box;
-  width: 96px;
   padding: 10px 0;
   padding-right: 28px;
 
   font-weight: normal;
-  text-align: left;
   word-wrap: break-word;
 
   @include osregular(15px, 20px, #444444);
 }
 
 .promo-card__value {
-  box-sizing: border-box;
   padding: 10px 0;
 
   word-wrap: break-word;
@@ -113,12 +109,14 @@
 
 @media (min-width: $tablet-width) {
   .promo-card {
+    position: relative;
+
     padding: 46px 50px 53px;
   }
 
   .promo-card__name-wrapper {
-    position: relative;
-
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 50px;
   }
 
@@ -130,10 +128,12 @@
 
   .promo-card__label {
     position: absolute;
-    top: 24%;
-    right: 23px;
+    top: 47px;
+    right: 53px;
 
     width: 80px;
+    margin-top: 12px;
+    margin-right: 20px;
 
     text-align: center;
 
@@ -197,7 +197,7 @@
   .promo-card {
     position: relative;
 
-    padding: 126px 583px 73px 174px;
+    padding: 126px 350px 73px 41px;
   }
 
   .promo-card__name-wrapper {
@@ -205,22 +205,23 @@
   }
 
   .promo-card__name {
-    width: 530px;
+    order: 2;
 
     @include osbold(53px, 57px, #000000);
   }
 
   .promo-card__label {
-    right: auto;
-    left: -132px;
+    order: 1;
+    margin-top: 14px;
+    margin-right: 0;
   }
 
   .promo-card__content-wrapper {
     position: static;
 
     width: 292px;
-    // margin-right: auto;
-    // margin-left: 133px;
+    margin-right: auto;
+    margin-left: 133px;
     padding-right: 0;
   }
 

@@ -1,4 +1,7 @@
 .main-nav {
+  position: relative;
+  z-index: 1;
+
   box-sizing: border-box;
 }
 
@@ -63,7 +66,7 @@
     background-image: url("../../img/icon-menu-close.svg");
   }
 
-  &--no-js {
+  &--hidden {
     display: none;
   }
 }
@@ -80,10 +83,6 @@
 
   &--open {
     height: 316px;
-  }
-
-  &--no-js {
-    height: auto;
   }
 }
 

@@ -9,6 +9,8 @@
   margin-bottom: 26px;
   padding: 0 30px;
 
+  word-wrap: break-word;
+
   @include osbold(18px, 30px, #000000);
 }
 
@@ -34,11 +36,14 @@
   font-weight: normal;
   vertical-align: top;
   text-align: left;
+  word-wrap: break-word;
 }
 
 .contacts__email-value {
   box-sizing: border-box;
   padding: 0;
+
+  word-wrap: break-word;
 
   border-bottom: 2px solid #62d1ba;
 }
@@ -48,6 +53,7 @@
 
   color: inherit;
   text-decoration: none;
+  word-wrap: break-word;
 
   transition: 0.1s ease-in-out;
 
@@ -78,14 +84,19 @@
   font-weight: normal;
   vertical-align: top;
   text-align: left;
+  word-wrap: break-word;
 }
 
 .contacts__address-value {
   box-sizing: border-box;
   padding: 0;
+
+  word-wrap: break-word;
 }
 
-.contacts__map-wrapper {
+.contacts__map {
+  z-index: 0;
+
   display: block;
   box-sizing: border-box;
   height: 457px;
@@ -96,31 +107,18 @@
   background-color: #f1f1f1;
 }
 
-.contacts__map-link {
-  position: relative;
-
-  display: none;
+.contacts__map-fallback-link {
+  display: block;
   box-sizing: border-box;
   width: 322px;
   margin: 0 auto;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 145px;
-    left: 138px;
-
-    width: 66px;
-    height: 100px;
-
-    background: url(../img/icon-map-pin.svg) no-repeat 0 0;
-  }
-  &--no-js {
-    display: block;
+  &--hidden {
+    display: none;
   }
 }
 
-.contacts__map-image {
+.contacts__map-fallback-image {
   box-sizing: border-box;
   width: 322px;
   height: 457px;
@@ -170,11 +168,11 @@
     @include osregular(17px, 30px, #444444);
   }
 
-  .contacts__map-wrapper {
+  .contacts__map {
     margin-bottom: 55px;
   }
 
-  .contacts__map-link {
+  .contacts__map-fallback-link {
     width: 768px;
 
     &::before {
@@ -183,7 +181,7 @@
     }
   }
 
-  .contacts__map-image {
+  .contacts__map-fallback-image {
     width: 768px;
   }
 
@@ -223,7 +221,7 @@
     margin-right: auto;
   }
 
-  .contacts__map-wrapper {
+  .contacts__map {
     position: absolute;
     top: 71px;
     right: 0;
@@ -231,7 +229,7 @@
     width: 525px;
   }
 
-  .contacts__map-link {
+  .contacts__map-fallback-link {
     width: auto;
 
     &::before {
@@ -240,7 +238,7 @@
     }
   }
 
-  .contacts__map-image {
+  .contacts__map-fallback-image {
     width: 525px;
   }
 

@@ -1,23 +1,7 @@
-// .container {
-//   box-sizing: border-box;
-//   min-width: 320px;
-//   max-width: 1150px;
-//   // width: 320px;
-//   // width: 768px;
-//   // width: 1150px;
-//   width: 100%;
-//   margin: 0 auto;
-// }
-
-// @media (min-width: $tablet-width) {
-//   .container {
-//     width: 768px;
-//   }
-// }
-
-// @media (min-width: $desktop-width) {
-//   .container {
-//     width: 1150px;
-//     padding: 0 50px;
-//   }
-// }
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1150px;
+  margin: 0 auto;
+}

@@ -17,6 +17,7 @@ var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
 var cheerio = require("gulp-cheerio");
 var csscomb = require("gulp-csscomb");
+var stylelint = require("gulp-stylelint");
 var concat = require("gulp-concat");
 
 gulp.task("buildClean", function () {
@@ -40,24 +41,22 @@ gulp.task("html", function () {
 });
 
 gulp.task("css", function () {
-  return gulp.src([
-    "./source/libs/*/build/*.css",
-    "./source/sass/*.scss",
-    "./source/sass/blocks/**/*.scss"
-  ])
+  return gulp.src("./source/sass/style.scss")
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(rename(function (path) {
-      path.extname = ".scss";
-    }))
-    .pipe(concat("style.css"))
     .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
+    
     .pipe(csscomb())
+    .pipe(stylelint({
+      failAfterError: false,
+      fix: true
+    }))
+    .pipe(gulp.dest("./build/css"))
     .pipe(minify())
-    .pipe(rename({ suffix: ".min" }))
+    .pipe(rename("./style.min.css"))
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./build/css"))
     .pipe(server.stream());
@@ -82,14 +81,13 @@ gulp.task("copy", function () {
     .pipe(gulp.dest("./build"));
 });
 
-gulp.task('scripts', function () {
+gulp.task("scripts", function () {
   return gulp.src([
-    "./source/libs/*/build/*.js",
     "./source/js/**/*.js",
+    "./source/libs/**/*.js",
   ])
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(concat('script.js'))
     .pipe(gulp.dest("./build/js"))
     .pipe(uglify())
     .pipe(rename({ suffix: ".min" }))
@@ -151,13 +149,17 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("./build/img"));
 });
 
-gulp.task("stylecomb", function () {
+gulp.task("stylefix", function () {
   return gulp.src([
     "./source/sass/**/*.scss"
   ], {
     base: "source"
   })
     .pipe(csscomb())
+    .pipe(stylelint({
+      failAfterError: false,
+      fix: true
+    }))
     .pipe(gulp.dest("./source"))
 });
 
@@ -174,6 +176,7 @@ gulp.task("images",
 
 gulp.task("build",
   gulp.series(
+    "stylefix",
     "buildClean",
     gulp.parallel(
       "html",

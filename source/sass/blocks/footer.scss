@@ -1,4 +1,4 @@
-.footer {
+.footer__container {
   position: relative;
 
   box-sizing: border-box;
@@ -9,8 +9,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 80px;
     right: 30px;
+    bottom: 80px;
     left: 30px;
 
     box-sizing: border-box;
@@ -26,7 +26,7 @@
 
 .footer__social-links {
   margin: 0 auto;
-  margin-bottom: 46px;
+  margin-bottom: 39px;
 }
 
 .footer__copyright {
@@ -72,16 +72,16 @@
   transition: 0.1s ease-in-out;
 
   fill: #63d1bb;
+
   @include responsive-image;
 }
 
 @media (min-width: $tablet-width) {
-  .footer {
+  .footer__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 143px;
-    padding: 30px 50px;
+    padding: 54px 50px;
 
     &::before {
       display: none;
@@ -92,6 +92,7 @@
     display: flex;
     box-sizing: border-box;
     width: 200px;
+    height: 38px;
   }
 
   .footer__logo-image {
@@ -102,6 +103,7 @@
     transition: 0.1s ease-in-out;
 
     fill: #000000;
+
     @include responsive-image;
 
     &:hover {
