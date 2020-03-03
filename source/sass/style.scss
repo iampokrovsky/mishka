@@ -5,7 +5,7 @@
 
   font-display: swap;
   src: url("../fonts/opensansregular.woff2") format("woff2"),
-  url("../fonts/opensansregular.woff") format("woff");
+    url("../fonts/opensansregular.woff") format("woff");
 }
 
 @font-face {
@@ -15,11 +15,10 @@
 
   font-display: swap;
   src: url("../fonts/opensansbold.woff2") format("woff2"),
-  url("../fonts/opensansbold.woff") format("woff");
+    url("../fonts/opensansbold.woff") format("woff");
 }
 
-
-@import "./toggler.scss";
+@import "../libs/swiper-5.3.1/swiper.scss";
 @import "./variables.scss";
 @import "./mixins.scss";
 @import "./animations.scss";

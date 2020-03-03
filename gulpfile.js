@@ -17,6 +17,7 @@ var htmlmin = require("gulp-htmlmin");
 var uglify = require("gulp-uglify");
 var cheerio = require("gulp-cheerio");
 var csscomb = require("gulp-csscomb");
+var stylelint = require("gulp-stylelint");
 var concat = require("gulp-concat");
 
 gulp.task("buildClean", function () {
@@ -73,7 +74,10 @@ gulp.task("copy", function () {
 });
 
 gulp.task("scripts", function () {
-  return gulp.src("./source/js/**/*.js")
+  return gulp.src([
+    "./source/js/**/*.js",
+    "./source/libs/**/*.js",
+  ])
     .pipe(plumber())
     .pipe(uglify())
     .pipe(rename({ suffix: ".min" }))
@@ -134,13 +138,17 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("./build/img"));
 });
 
-gulp.task("stylecomb", function () {
+gulp.task("stylefix", function () {
   return gulp.src([
     "./source/sass/**/*.scss"
   ], {
     base: "source"
   })
     .pipe(csscomb())
+    .pipe(stylelint({
+      failAfterError: false,
+      fix: true
+    }))
     .pipe(gulp.dest("./source"))
 });
 
@@ -157,6 +165,7 @@ gulp.task("images",
 
 gulp.task("build",
   gulp.series(
+    "stylefix",
     "buildClean",
     gulp.parallel(
       "html",
@@ -165,7 +174,6 @@ gulp.task("build",
       "copy",
       "scripts"
     ),
-    "stylecomb"
   )
 );
 

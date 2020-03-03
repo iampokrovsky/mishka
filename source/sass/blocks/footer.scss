@@ -72,6 +72,7 @@
   transition: 0.1s ease-in-out;
 
   fill: #63d1bb;
+
   @include responsive-image;
 }
 
@@ -80,7 +81,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // min-height: 143px;
     padding: 54px 50px;
 
     &::before {
@@ -103,6 +103,7 @@
     transition: 0.1s ease-in-out;
 
     fill: #000000;
+
     @include responsive-image;
 
     &:hover {

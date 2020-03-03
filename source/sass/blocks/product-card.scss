@@ -55,8 +55,8 @@
 }
 
 .product-card__top-wrapper {
-  box-sizing: border-box;
   flex-shrink: 0;
+  box-sizing: border-box;
   margin-bottom: 19px;
 }
 
@@ -90,23 +90,23 @@
 
 .product-card__specifications {
   box-sizing: border-box;
+  max-height: 180px;
   margin: 0;
   padding: 0;
-  max-height: 180px;
+  overflow: hidden;
 
   word-wrap: break-word;
-  overflow: hidden;
 
   @include osregular(13px, 30px, #444444);
 }
 
 .product-card__bottom-wrapper {
   display: flex;
+  flex-shrink: 0;
   justify-content: space-between;
   align-items: flex-end;
   box-sizing: border-box;
   min-height: 46px;
-  flex-shrink: 0;
 
   border-top: 1px solid #ececec;
 }
@@ -114,8 +114,8 @@
 .product-card__price {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
   margin-top: 20px;
+  padding: 0;
 
   word-wrap: break-word;
 

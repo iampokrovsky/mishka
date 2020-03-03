@@ -9,6 +9,7 @@
   margin: 0;
   margin-bottom: 23px;
   padding: 0;
+
   word-wrap: break-word;
 
   @include osregular(13px, 24px, #444444);
@@ -113,6 +114,7 @@
 
 .order-form__type-label {
   box-sizing: border-box;
+
   word-wrap: break-word;
 
   cursor: pointer;
@@ -197,6 +199,7 @@
 
 .order-form__color-label {
   box-sizing: border-box;
+
   word-wrap: break-word;
 
   cursor: pointer;
@@ -266,6 +269,7 @@
 .order-form__name-label {
   display: block;
   box-sizing: border-box;
+
   word-wrap: break-word;
 
   @include osbold(17px, 18px, #000000);
@@ -469,6 +473,7 @@
   display: block;
   box-sizing: border-box;
   margin-bottom: 31px;
+
   word-wrap: break-word;
 
   @include osregular(14px, 16px, #444444);
@@ -683,9 +688,9 @@
   }
 
   .order-form__notice {
+    max-width: 350px;
     margin-top: 8px;
     margin-bottom: 0;
-    max-width: 350px;
 
     @include osregular(17px, 30px, #444444);
   }

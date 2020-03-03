@@ -17,9 +17,11 @@
 
   background-color: #ffffff;
   opacity: 0.9;
+
   &--closed {
     display: none;
   }
+
   &--open {
     display: block;
   }

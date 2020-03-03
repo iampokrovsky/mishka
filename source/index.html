@@ -208,49 +208,52 @@
       <section class="main-content__reviews reviews">
         <div class="reviews__wrapper">
           <h2 class="reviews__heading">Отзывы</h2>
-          <ul class="reviews__list">
-            <li class="reviews__item">
-              <blockquote class="reviews__content">
-                <p class="reviews__text">
-                  Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у
-                  популярных
-                  инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более
-                  стильными, а также набирают
-                  больше лайков!
-                </p>
-                <cite class="reviews__author-name">Анастасия Красильникова</cite>
-                <address class="reviews__author-link">@misssssiskras</address>
-              </blockquote>
-            </li>
-            <!-- <li class="reviews__item swiper-slide">
-              <blockquote class="reviews__content">
-                <p class="reviews__text">
-                  Незабываемый экспириенс! Таких потрясающих вязаных изделий нигде больше не найти, единственное место
-                  в
-                  Петербурге!
-                </p>
-                <cite class="reviews__author-name">Маша Татаринцева</cite>
-                <address class="reviews__author-link">@tatarintseva</address>
-              </blockquote>
-            </li>
-            <li class="reviews__item swiper-slide">
-              <blockquote class="reviews__content">
-                <p class="reviews__text">
-                  Когда мы шли к Шалашу Ленина, я сильно замёрз и пришлось надеть вязаные корзинки на руки.
-                  Удивительно,
-                  но несмотря на то, что они неплотно прилеглали к руквам, мне было очень тепло!
-                  Производители просто герои социалистического труда!
-                </p>
-                <cite class="reviews__author-name">Илья Ленин</cite>
-                <address class="reviews__author-link">@ilyalenin</address>
-              </blockquote>
-            </li> -->
-          </ul>
-          <div class="reviews__controls">
-            <button class="reviews__сontrol reviews__сontrol--back" type="button">
+          <div class="reviews__container swiper-container">
+            <ul class="reviews__list swiper-wrapper">
+              <li class="reviews__item swiper-slide">
+                <blockquote class="reviews__content">
+                  <p class="reviews__text">
+                    Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у
+                    популярных
+                    инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали
+                    более
+                    стильными, а также набирают
+                    больше лайков!
+                  </p>
+                  <cite class="reviews__author-name">Анастасия Красильникова</cite>
+                  <address class="reviews__author-link">@misssssiskras</address>
+                </blockquote>
+              </li>
+              <li class="reviews__item swiper-slide">
+                <blockquote class="reviews__content">
+                  <p class="reviews__text">
+                    Незабываемый экспириенс! Таких потрясающих вязаных изделий нигде больше не найти, единственное место
+                    в
+                    Петербурге!
+                  </p>
+                  <cite class="reviews__author-name">Маша Татаринцева</cite>
+                  <address class="reviews__author-link">@tatarintseva</address>
+                </blockquote>
+              </li>
+              <li class="reviews__item swiper-slide">
+                <blockquote class="reviews__content">
+                  <p class="reviews__text">
+                    Когда мы шли к Шалашу Ленина, я сильно замёрз и пришлось надеть вязаные корзинки на руки.
+                    Удивительно, но
+                    несмотря на то, что они неплотно прилеглали к руквам, мне было очень тепло!
+                    Производители просто герои социалистического труда!
+                  </p>
+                  <cite class="reviews__author-name">Илья Ленин</cite>
+                  <address class="reviews__author-link">@ilyalenin</address>
+                </blockquote>
+              </li>
+            </ul>
+          </div>
+          <div class="reviews__buttons reviews__buttons--no-js">
+            <button class="reviews__button reviews__button--prev" type="button">
               <span class="visually-hidden">Предыдущий отзыв</span>
             </button>
-            <button class="reviews__сontrol reviews__сontrol--next" type="button">
+            <button class="reviews__button reviews__button--next" type="button">
               <span class="visually-hidden">Следующий отзыв</span>
             </button>
           </div>
@@ -373,6 +376,8 @@
 
   <script src="./js/menu.min.js"></script>
   <script src="./js/modal.min.js"></script>
+  <script src="./js/swiper-5.3.1/swiper.min.js"></script>
+  <script src="./js/slider.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="./js/map.min.js"></script>
 </body>

@@ -75,15 +75,19 @@
   @include osregular(15px, 30px, #444444);
 }
 
-.reviews__controls {
+.reviews__buttons {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
   width: 260px;
   margin: 0 auto 38px;
+
+  &--hidden {
+    display: none;
+  }
 }
 
-.reviews__сontrol {
+.reviews__button {
   box-sizing: border-box;
   width: 130px;
   height: 52px;
@@ -104,7 +108,7 @@
     opacity: 0.3;
   }
 
-  &--back {
+  &--prev {
     background-image: url("../../img/icon-left-arrow.svg");
   }
 
@@ -126,6 +130,7 @@
 
   .reviews__wrapper {
     position: relative;
+    z-index: 0;
 
     padding: 78px 50px 46px;
 
@@ -174,16 +179,17 @@
     @include osregular(17px, 30px, #444444);
   }
 
-  .reviews__controls {
+  .reviews__buttons {
     position: absolute;
     right: 68px;
     bottom: 62px;
+    z-index: 1;
 
     width: 137px;
     margin: 0;
   }
 
-  .reviews__сontrol {
+  .reviews__button {
     width: 50px;
     height: 26px;
 
@@ -224,7 +230,7 @@
     margin-bottom: 4px;
   }
 
-  .reviews__controls {
+  .reviews__buttons {
     right: 18px;
     bottom: 111px;
   }
