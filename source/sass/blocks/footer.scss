@@ -9,8 +9,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 80px;
     right: 30px;
+    bottom: 80px;
     left: 30px;
 
     box-sizing: border-box;
@@ -26,7 +26,7 @@
 
 .footer__social-links {
   margin: 0 auto;
-  margin-bottom: 46px;
+  margin-bottom: 39px;
 }
 
 .footer__copyright {

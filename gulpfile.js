@@ -75,12 +75,8 @@ gulp.task("copy", function () {
 gulp.task("scripts", function () {
   return gulp.src("./source/js/**/*.js")
     .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(concat('script.js'))
-    .pipe(gulp.dest("./build/js"))
     .pipe(uglify())
     .pipe(rename({ suffix: ".min" }))
-    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("./build/js"))
 });
 
