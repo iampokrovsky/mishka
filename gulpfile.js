@@ -163,6 +163,11 @@ gulp.task("stylefix", function () {
     .pipe(gulp.dest("./source"))
 });
 
+gulp.task("docs", function () {
+  return gulp.src("./build/**/*.*")
+    .pipe(gulp.dest("./docs"));
+});
+
 gulp.task("images",
   gulp.series(
     "imgСlean",
@@ -185,6 +190,7 @@ gulp.task("build",
       "scripts",
       "outline",
     ),
+    "docs"
   )
 );
 
