@@ -3,7 +3,7 @@
   padding-bottom: 38px;
 
   background-color: #ffffff;
-  background-image: url("../../img/bg-zigzag-line.svg");
+  background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: 100% auto;
@@ -110,11 +110,11 @@
   }
 
   &--prev {
-    background-image: url("../../img/icon-left-arrow.svg");
+    background-image: url("../img/icon-left-arrow.svg");
   }
 
   &--next {
-    background-image: url("../../img/icon-right-arrow.svg");
+    background-image: url("../img/icon-right-arrow.svg");
     border-left: none;
   }
 
@@ -140,13 +140,13 @@
 
     padding: 78px 50px 46px;
 
-    background-image: url("../../img/review@1x.jpg");
+    background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: 350px auto;
 
     @media (min-resolution: 1.5dppx) {
-      background-image: url("../../img/review@2x.jpg");
+      background-image: url("../img/review@2x.jpg");
     }
   }
 
