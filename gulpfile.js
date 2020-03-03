@@ -97,8 +97,9 @@ gulp.task("scripts", function () {
 
 gulp.task("server", function () {
   server.init({
-    server: "build/",
     // server: "source/",
+    // server: "build/",
+    server: "docs/",
     notify: false,
     open: true,
     cors: true,
