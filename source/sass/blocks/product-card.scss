@@ -22,6 +22,7 @@
 
 .product-card__image-wrapper {
   box-sizing: border-box;
+  height: 195px;
   margin: 0;
   padding: 0;
 
@@ -158,10 +159,13 @@
     }
   }
 
+  .product-card__image-wrapper {
+    height: 334px;
+  }
+
   .product-card__image-link {
     flex-shrink: 0;
     width: 334px;
-    height: 334px;
   }
 
   .product-card__image {
@@ -196,9 +200,12 @@
     margin-right: 50px;
   }
 
+  .product-card__image-wrapper {
+    height: 462px;
+  }
+
   .product-card__image-link {
     width: 316px;
-    height: 462px;
   }
 
   .product-card__image {
